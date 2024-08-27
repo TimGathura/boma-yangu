@@ -10,12 +10,49 @@
     --faces-bg: #f1f5f3;
     --boma-green: #15b76c;
     --about-ahp-background: #e3f5da;
+    --hero-content-text: #5c6572;
+    --ahp-text-color: #26530c;
+    --register-1-green: #15b76c;
+}
+
+@layer utilities {
+    .responsive-padding {
+      --min-padding: 0px;
+      --max-padding: 128px; /* equivalent to px-32 */
+      --padding-scale: calc((100vw - 1280px) / (1536px - 1280px));
+      --current-padding: calc(var(--min-padding) + (var(--max-padding) - var(--min-padding)) * var(--padding-scale));
+      padding-left: clamp(var(--min-padding), var(--current-padding), var(--max-padding));
+      padding-right: clamp(var(--min-padding), var(--current-padding), var(--max-padding));
+    }
+  }
+
+.text-hero {
+    color: var(--hero-content-text);
+}
+
+.text-ahp {
+    color: var(--ahp-text-color);
+}
+
+.text-register-1 {
+    color: var(--register-1-green);
+}
+
+.border-register-4 {
+    border: solid var(--register-1-green) 4px;
+}
+
+.border-register-1 {
+    border: solid var(--register-1-green) 1px;
+}
+
+.font-semi {
+    font-weight: 500;
 }
 
 
 .h-nav {
     height: 80px;
-    border: solid gray 1px;
 }
 
 .h-hero {

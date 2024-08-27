@@ -15,6 +15,13 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+      },
+      screens: {
+        'xs': '320px',
+        'xl': '1280px',
+        '1.5xl': '1408px', // Midpoint between XL and 2XL
+        '2xl': '1536px',
+        '3xl': '1920px',
       }
     },
   },

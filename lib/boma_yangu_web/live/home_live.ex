@@ -1,7 +1,7 @@
 defmodule BomaYanguWeb.HomeLive do
   use BomaYanguWeb, :blank_layout
 
-  import BomaYanguWeb.Components.Nav
+  import BomaYanguWeb.Components.Nav, warn: false
   import BomaYanguWeb.Components.Home
 
   def mount(_params, _session, socket) do
@@ -12,7 +12,7 @@ defmodule BomaYanguWeb.HomeLive do
 
   def render(assigns) do
     ~H"""
-    <.nav_component />
+    
     <.home_live_component/>
     """
   end
