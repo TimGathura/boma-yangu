@@ -5,35 +5,40 @@
 
     <!--Nav Section -->
     <section id="nav-bar-cont"
-        class="fixed z-50 flex justify-center w-full bg-white bg-opacity-80 backdrop-blur-sm">
+        class="fixed z-50 flex justify-center w-full bg-white bg-opacity-80 backdrop-blur-sm shadow-md">
         <div id="nav-cont"
-            class="flex justify-between items-center h-[80px] text-gray-700 font-bold w-full
+            class="flex justify-between items-center text-gray-700 font-bold w-full
             xs:px-4 sm:px-8 md:px-8 lg:px-4 xl:px-8 2xl:px-0 3xl:px-0
             transition-all duration-300 ease-in-out
-            2xl:max-w-[1536px]">
+            2xl:max-w-[1536px]
+            xs:h-[48px] lg:h-[80px]">
             <div id="logo" class="flex items-center">
-                <img src="images/boma_yangu_logo.png" alt="#" class="xs:w-40 sm:w-48 md:w-48 lg:w-48 xl:w-60">
+                <img src="images/boma_yangu_logo.png" alt="#" class="xs:w-32 sm:w-48 md:w-48 lg:w-48 xl:w-60">
             </div>
             <div id="nav-options" class="hidden xl:flex">
                 <ul class="flex justify-between items-center gap-12">
-                    <li>Home</li>
-                    <li>Projects</li>
-                    <li class="flex gap-1">
-                        <p>Participants</p>
-                        <span class="material-symbols-outlined text-gray-700">
-                            keyboard_arrow_down
-                        </span>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li class="flex">
+                        <a href="#" class="flex gap-1"><p>Participants</p>
+                            <span class="material-symbols-outlined text-gray-700">
+                                keyboard_arrow_down
+                            </span>
+                        </a>
                     </li>
-                    <li>About</li>
-                    <li>News & info</li>
-                    <li>Tenders</li>
-                    <li>Help</li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">News & info</a></li>
+                    <li><a href="#">Tenders</a></li>
+                    <li><a href="#">Help</a></li>
                 </ul>
             </div>
             <div class="hidden xl:flex">
                 <ul class="flex justify-between items-center gap-12">
-                    <li>Log in</li>
-                    <li class="bg-register-btn text-white text-1xl rounded-50px px-4 py-2"> Register</li>
+                    <li>
+                        <button id="log-in" class="hover:text-green-600  transition duration-300 ease-in-out">Log in</button></li>
+                    <li class="bg-register-btn text-white text-1xl rounded-50px px-4 py-2 hover:bg-white hover:border-2 hover:border-green-600 hover:rounded-50px transition duration-300 ease-in-out">
+                        <button id="register" class="hover:text-green-500  transition duration-300">Register</button>
+                    </li>
                 </ul>
             </div>
             <button id="hamburger" class="xl:hidden text-gray-700 hover:text-gray-900 transition duration-300">
@@ -152,30 +157,50 @@
 
 
     <section id="faces-section-cont" 
-        class="flex flex-col h-screen w-full gap-16 mt-16
-        2xl:max-w-[1536px]">
+        class="flex flex-col w-full gap-16 mt-16
+        2xl:max-w-[1536px]
+        xs:h-fit lg:h-fit">
         <div id="housing-fundamental-cont"
-            class="flex justify-between rounded-[10px] bg-faces  relative overflow-visible ">
-            <div class="flex justify-center w-35pct   relative">
-                <div class="flex justify-center w-3/4   absolute -top-12">
+            class="flex justify-between rounded-[10px] bg-faces  relative overflow-visible 
+            xs:flex xs:flex-col lg:flex lg:flex-row">
+            <div class="flex justify-center w-35pct   relative
+            xs:w-full lg:w-fit
+            xs:p-4">
+                <div class="flex justify-center   absolute -top-12
+                xs:relative xs:top-0 xs:w-full lg:w-fit lg: xl:absolute xl:w-3/4 xl:-top-12">
                     <img src="images/faces_page2.png" alt="#" class="w-full">
                 </div>
-                <div class="invisible w-3/4">
+                <div class="invisible w-3/4
+                xs:hidden xl:block">
                     <img src="images/faces_page2.png" alt="#" class="w-full">
                 </div>
             </div>
-            <div class="flex justify-center  w-65pct">
-                <div class="flex flex-col items-start justify-center gap-4  w-10/12 mr-6">
-                    <h2 class="text-4xl font-medium w-[60%]">Housing is a fundamental human need</h2>
-                    <p class="text-hero text-[18px] w-10/12">The right to housing is embedded in the constitution of
+            <div class="flex justify-center  w-65pct
+            xs:w-full lg:w-full">
+                <div class="flex flex-col items-start justify-center gap-4  w-10/12 lg:mr-6
+                xs:w-full lg:w-10/12
+                xs:px-8 lg:px-0">
+                    <h2 class="font-medium w-[60%]
+                    xs:text-2xl sm:text-3xl lg:text-4xl
+                    xs:
+                    xs:font-normal lg:font-medium
+                    xs:w-full lg:w-[60%]">Housing is a fundamental human need</h2>
+                    <p class="text-hero
+                    xs:text-[16px] lg:text[18px]
+                    xs:w-full lg:w-10/12
+                    xs:mb-4 lg:mb-0">The right to housing is embedded in the constitution of
                         Kenya,
                         which provides that every person has the right to accessible and adequate housing,
                         and to reasonable standards of sanitation. Kenya's growing economy translates into an
                         expanding middle class, therefore increasing demand for housing.</p>
-                    <div class="self-end">
-                        <div class="flex items-center justify-center rounded-50px px-4 bg-ahp text-ahp gap-[6px]">
-                            <p class="font-medium text-[18px]">About AHP</p>
-                            <span class="material-symbols-outlined text-[18px]">
+                    <div class="
+                    xs:self-center lg:self-end">
+                        <div class="flex items-center justify-center rounded-50px px-4 bg-ahp text-ahp gap-[6px]
+                        xs:mb-8 lg:mb-0">
+                            <p class="font-medium
+                            xs:text-[20px] md:text-[18px]">About AHP</p>
+                            <span class="material-symbols-outlined
+                             xs:text-[20px] md:text-[18px]">
                                 arrow_forward
                             </span>
                         </div>
@@ -185,27 +210,41 @@
         </div>
 
         <div id="400+-cont"
-            class="flex items-center justify-center bg-boma-green rounded-[50px] gap-40  py-16 h-fit text-[18px]">
+            class="items-center justify-center bg-boma-green gap-40  py-16 h-fit text-[18px]
+            xs:flex xs:flex-col sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex lg:flex-row
+            xs:gap-8 lg:gap-20 xl:gap-32
+            xs:py-8 lg:py-16
+            xs:rounded-[20px] lg:rounded-[50px]">
             <div class="flex flex-col items-center justify-center gap-4 ">
-                <h2 class="font-bold text-7xl text-white">400+</h2>
-                <p class="font-medium text-black">Projects completed</p>
+                <h2 class="font-bold text-white
+                xs:text-5xl xl:text-7xl">400+</h2>
+                <p class="font-medium text-green-900">Projects completed</p>
             </div>
+            
             <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-7xl text-white">45,000</h2>
-                <p class="font-medium text-black">Home owners</p>
+                <h2 class="font-bold text-white
+                xs:text-5xl xl:text-7xl">45,000</h2>
+                <p class="font-medium text-green-900">Home owners</p>
             </div>
+            
             <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-7xl text-white">334,152</h2>
-                <p class="font-medium text-black">Registered Applicants</p>
+                <h2 class="font-bold text-white
+                xs:text-5xl xl:text-7xl">334,152</h2>
+                <p class="font-medium text-green-900">Registered Applicants</p>
             </div>
+            
             <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-7xl text-white">200+</h2>
-                <p class="font-medium text-black">MSME's on board</p>
+                <h2 class="font-bold text-white
+                xs:text-5xl xl:text-7xl">200+</h2>
+                <p class="font-medium text-green-900">MSME's on board</p>
             </div>
         </div>
 
-        <div class="flex items-start">
-            <p class="text-4xl font-medium w-1/3">Start the journey to home ownership in <span class="text-register-1">3
+        <div class="flex
+        xs:items-center lg:items-start">
+            <p class="text-4xl font-medium
+            xs:w-full lg:w-1/2 xl:w-1/2
+            xs:text-2xl sm:text-3xl lg:text-4xl">Start the journey to home ownership in <span class="text-register-1">3
                     simple steps</span></p>
         </div>
 
@@ -214,19 +253,39 @@
 
     <section id="3-simple-steps" 
         class="flex flex-col justify-between   w-full 2xl:h-[240vh] mt-24
-        2xl:max-w-[1536px]">
-        <div id="1-register-cont" class="flex items-center justify-between   pt-4 w-full h-27-5pct">
-            <div id="content" class="flex flex-col items-start  w-1/2 h-full  ">
-                <div id="1-register" class="flex items-center gap-4  w-full  py-8">
+        2xl:max-w-[1536px]
+        xs:h-fit lg:h[240vh]">
+        <div id="1-register-cont" 
+            class="items-center justify-between   pt-4 w-full h-27-5pct
+            xs:flex xs:flex-col lg:flex lg:flex-row">
+            <div id="content" 
+                class="flex flex-col h-full  
+                xs:w-full lg:w-1/2
+                xs:items-start lg:items-start
+                xs:mb-0 lg:mb-12">
+                <div id="1-register" 
+                    class="flex items-center gap-4  w-full
+                    xs:py-0 lg:py-8
+                    xs:mb-4 lg:mb-0 ">
                     <div
-                        class="inline-flex items-center justify-center w-12 h-12 border-4 border-register-4 rounded-full">
-                        <span class="text-2xl font-bold text-register-1">1</span>
+                        class="items-center justify-center border-register-4 rounded-full
+                        xs:border-2 lg:border-4
+                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
+                        xs:p-4 lg:p-0
+                        xs:flex lg:inline-flex">
+                        <span class="text-register-1
+                        xs:font-medium lg:font-bold
+                        xs:text-xl lg:text-2xl">1</span>
                     </div>
-                    <p class="text-4xl font-medium">
+                    <p class="
+                    xs:font-medium lg:font-medium
+                    xs:text-2xl sm:text-3xl lg:text-4xl">
                         Register
                     </p>
                 </div>
-                <div id="1-text" class="flex flex-col text-hero text-[18px]  w-10/12   space-y-2">
+                <div id="1-text" class="flex flex-col text-hero   space-y-2
+                xs:w-full lg:w-10/12
+                xs:text-[16px] lg:text-[18px]">
                     <p>Registration is free. Complete your profile by submitting your personal details
                         and housing preference (the type of house you are applying for).
                         Once registered, your details will be verified through the relevant Government offices.
@@ -237,13 +296,18 @@
                         <li>Must have a valid <span class="font-bold">National Identity Card</span></li>
                     </ul>
                 </div>
-                <div id="register-now" class="flex border-register-1  rounded-50px  px-8 py-4 mt-16">
-                    <span class="font-medium text-[18px]">
+                <div id="register-now" 
+                    class="flex border-register-1  rounded-50px mt-16
+                    xs:px-4 xs:py-2 lg:px-8 lg:py-4
+                    xs:mb-8 lg:mb-0">
+                    <span class="font-medium
+                    xs:text-[16px] lg:text-[18px]">
                         Register Now
                     </span>
                 </div>
             </div>
-            <div id="register-image" class="flex justify-center w-1/2 h-full">
+            <div id="register-image" class="flex justify-center h-full
+            xs:w-full lg:w-1/2">
                 <div class="flex h-fit mb-6">
                     <img src="images/3_easy_steps_1.png" alt="#" class="max-w-full h-auto mx-auto">
                 </div>
@@ -252,24 +316,45 @@
 
 
 
-        <div id="2-save-cont" class="flex items-center justify-between bg-faces h-32-5pct  pt-12">
-            <div id="register-image" class="flex justify-center w-1/2 h-full">
+        <div id="2-save-cont" 
+            class="items-center justify-between bg-faces h-32-5pct  pt-12
+            xs:pb-0 lg:pb-12
+            xs:flex xs:flex-col-reverse xs:gap-8 lg:flex lg:flex-row lg:gap-0">
+            <div id="register-image" class="flex justify-center h-full
+            xs:w-full lg:w-1/2">
                 <div class="flex h-fit mb-6">
                     <img src="images/3_easy_steps_2.png" alt="#" class="">
                 </div>
             </div>
 
-            <div id="content" class="flex flex-col items-start  w-1/2 h-full  pl-36  ">
-                <div id="2-save" class="flex items-center gap-4  w-full  py-8">
+            <div id="content" 
+                class="flex flex-col h-full
+                xs:w-full lg:w-1/2 xl:w-1/2
+                xs:items-start lg:items-start
+                xs:pl-0 lg:pl-16 xl:pl-36">
+                <div id="2-save" 
+                    class="flex items-center gap-4  w-full
+                    xs:py-0 lg:py-8
+                    xs:mb-4 lg:mb-0">
                     <div
-                        class="inline-flex items-center justify-center w-12 h-12 border-4 border-register-4 rounded-full">
-                        <span class="text-2xl font-bold text-register-1">2</span>
+                        class="items-center justify-center border-register-4 rounded-full
+                        xs:border-2 lg:border-4
+                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
+                        xs:p-4 lg:p-0
+                        xs:flex lg:inline-flex">
+                        <span class="text-register-1
+                        xs:font-medium lg:font-bold
+                        xs:text-xl lg:text-2xl">2</span>
                     </div>
-                    <p class="text-4xl font-medium">
+                    <p class="
+                    xs:font-medium lg:font-medium
+                    xs:text-2xl sm:text-3xl lg:text-4xl">
                         Save
                     </p>
                 </div>
-                <div id="2-text" class="flex flex-col text-hero text-[18px]  w-10/12  space-y-2">
+                <div id="2-text" class="flex flex-col text-hero  space-y-2
+                xs:w-full lg:w-10/12
+                xs:text-[16px] lg:text-[18px]">
                     <p>Upon registration, you can start saving any amount you wish to your account on Boma Yangu. </p>
                     <p> You can save via USSD or through the payment options available on the web portal. </p>
                     <p>You can also view all the available projects on Boma Yangu and add them to your wish list or
@@ -288,18 +373,37 @@
 
 
 
-        <div id="3-own-cont" class="flex items-center justify-between pt-12 h-27-5pct">
-            <div id="content" class="flex flex-col items-start  w-1/2 h-full">
-                <div id="3-own" class="flex items-center gap-4  w-full  py-8">
+        <div id="3-own-cont" 
+            class="items-center justify-between pt-12 h-27-5pct
+            xs:flex xs:flex-col lg:flex lg:flex-row">
+            <div id="content" 
+                class="flex flex-col h-full
+                xs:w-full lg:w-1/2
+                xs:items-start lg:items-start">
+                <div id="3-own" 
+                    class="flex items-center gap-4  w-full
+                    xs:py-0 lg:py-8
+                    xs:mb-4 lg:mb-0">
                     <div
-                        class="inline-flex items-center justify-center w-12 h-12 border-4 border-register-4 rounded-full">
-                        <span class="text-2xl font-bold text-register-1">3</span>
+                        class="items-center justify-center border-register-4 rounded-full
+                        xs:border-2 lg:border-4
+                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
+                        xs:p-4 lg:p-0
+                        xs:flex lg:inline-flex">
+                        <span class="text-register-1
+                        xs:font-medium lg:font-bold
+                        xs:text-xl lg:text-2xl">3</span>
                     </div>
-                    <p class="text-4xl font-medium">
+                    <p class="
+                    xs:font-medium lg:font-medium
+                    xs:text-2xl sm:text-3xl lg:text-4xl">
                         Own
                     </p>
                 </div>
-                <div id="1-text" class="flex flex-col text-hero text-[18px]  w-10/12   space-y-2">
+                <div id="1-text" class="flex flex-col text-hero   space-y-2
+                xs:w-full lg:w-10/12
+                xs:mb-8 lg:mb-0
+                xs:text-[16px] lg:text-[18px]">
                     <p> Allocation for available housing units is done through <span class="font-bold">a free, fair and
                             transparent process.</span></p>
                     <p> The initial eligibility for allocation will depend on several factors such as when you got to
@@ -312,7 +416,8 @@
                         sale.</p>
                 </div>
             </div>
-            <div id="register-image" class="flex justify-center  w-1/2 h-full">
+            <div id="register-image" class="flex justify-center h-full
+            xs:w-full lg:w-1/2">
                 <div class="flex h-fit mb-6">
                     <img src="images/3_easy_steps_3.png" alt="#" class="max-w-full h-auto mx-auto">
                 </div>
@@ -323,45 +428,64 @@
 
 
 
-        <div id="4-who-we-serve-cont" class="flex items-center justify-between mt-48 h-12-5pct">
-            <div class="flex flex-col w-1/2">
-                <p class="text-4xl font-medium  mb-4">Who we serve</p>
-                <p class="text-hero text-[18px] mb-2">The Affordable Housing Programme is a priority initiative under
+        <div id="4-who-we-serve-cont" class="flex items-center justify-between h-12-5pct
+        xs:mt-24 lg:mt-48">
+            <div class="flex flex-col
+            xs:w-full lg:w-2/3 xl:w-1/2">
+                <p class="font-medium  mb-4
+                xs:text-2xl lg:text-4xl">Who we serve</p>
+                <p class="text-hero mb-2
+                xs:text-[16px] lg:text-[18px]">The Affordable Housing Programme is a priority initiative under
                     the government which is geared towards facilitating the production of decent, safe and affordable
                     housing for citizens of Kenya.</p>
-                <p class="text-hero text-[18px]">Beyond catering to home applicants, the program incorporates supply,
+                <p class="text-hero
+                xs:text-[16px] lg:text-[18px]">Beyond catering to home applicants, the program incorporates supply,
                     demand, and creates an enabling environment through policy interventions.</p>
             </div>
         </div>
     </section>
 
 
-    <section id="who-we-serve-grid--section"
+    <section id="who-we-serve-grid-section"
         class="relative overflow-hidden flex flex-col   w-full 2xl:h-[200vh]
         2xl:max-w-[1536px]
-        2xl:mt-0">
+        xs:mt-8 2xl:mt-0">
         <div class="absolute inset-0 pointer-events-none z-0">
             <div
                 class="absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 w-[90%]  aspect-square rounded-full bg-gradient-to-r from-blue-100 to-purple-100 opacity-50">
             </div>
         </div>
-        <div id="grid-cont" class="relative z-10 grid grid-cols-2 grid-rows-3 gap-x-8 gap-y-20 py-8 h-[200vh]">
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
+        <div id="grid-cont" 
+            class="relative z-10 py-8
+            xs:h-fit lg:h-[200vh]
+            xs:flex xs:flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3
+            xs:gap-8 lg:gap-x-8 lg:gap-y-20">
+            <div id="grid-item" 
+                class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full
+                ">
+                <div 
+                    class="relative h-1/2">
                     <img src="images/holding-keys.jpg" alt="Handing over house keys" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">Local Home Applicants</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">Local Home Applicants</h2>
                     <p class="text-hero flex-grow">For potential home owners, the system allows you to register,
                         contribute and own a unit. The platform will feature a wallet for payments towards the deposit.
                     </p>
-                    <div class="flex justify-between items-center">
-                        <button id="register-now" class="flex border-register-1  rounded-50px  px-8 py-4">
-                            <span class="font-medium text-[18px]">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
+                        <button id="register-now" 
+                            class="flex border-register-1  rounded-50px
+                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
+                            <span class="font-medium
+                            xs:text-[16px] lg:text-[18px]">
                                 Register Now
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                            class="text-register-1 text-[18px] font-medium
+                            xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -371,17 +495,24 @@
                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">Diaspora Home applicants</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">Diaspora Home applicants</h2>
                     <p class="text-hero flex-grow">This account is for Kenyans leaving abroad with a valid Kenyan passport. 
                         They can save towards home ownership through the available payment channels.
                     </p>
-                    <div class="flex justify-between items-center">
-                        <button id="register-now" class="flex border-register-1  rounded-50px  px-8 py-4">
-                            <span class="font-medium text-[18px]">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
+                        <button id="register-now" 
+                            class="flex border-register-1  rounded-50px
+                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
+                            <span class="font-medium
+                            xs:text-[16px] lg:text-[18px]">
                                 Register Now
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                            class="text-register-1 font-medium
+                            xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -391,18 +522,22 @@
                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">Property Developers</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">Property Developers</h2>
                     <p class="text-hero flex-grow">The system will enable
                         developers to onboard and register as strategic partners. 
                         This will give developers access to demand and a variety of incentives.
                     </p>
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
                         <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
                             <span class="font-medium text-sm text-red-700">
                                 Coming soon
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                            class="text-register-1 font-medium
+                            xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -411,18 +546,25 @@
                     <img src="images/black-business.jpg" alt="black-business.jpg" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">Organised Groups</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">Organised Groups</h2>
                     <p class="text-hero flex-grow">The platform creates an avenue for organised groups to participate and offtake available 
                         units on behalf of their beneficiaries. Organised groups include; Employers (companies/businesses), Saccos, Chamas 
                         and any such groups duly registered in Kenya.
                     </p>
-                    <div class="flex justify-between items-center">
-                        <button id="register-now" class="flex border-register-1  rounded-50px  px-8 py-4">
-                            <span class="font-medium text-[18px]">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
+                        <button id="register-now" 
+                            class="flex border-register-1  rounded-50px
+                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
+                            <span class="font-medium
+                            xs:text-[16px] lg:text-[18px]">
                                 Register Now
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                        class="text-register-1 font-medium
+                        xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -431,18 +573,22 @@
                     <img src="images/msmes.webp" alt="msmes.webp" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">MSMEs</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">MSMEs</h2>
                     <p class="text-hero flex-grow">The system will enable
                         viewing and managing of MSME profiles and access to projects through which developers may off-take their goods and
                         services directly through the portal.
                     </p>
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
                         <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
                             <span class="font-medium text-sm text-red-700">
                                 Coming soon
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                        class="text-register-1 font-medium
+                        xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -451,17 +597,21 @@
                     <img src="images/black-handshake.jpg" alt="black-handshake.jpg" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium text-2xl mb-2">Financiers/Investor Strategic Partners</h2>
+                    <h2 class="font-medium mb-2
+                    xs:text-xl lg:text-2xl">Financiers/Investor Strategic Partners</h2>
                     <p class="text-hero flex-grow">The AHP program relies on strategic partners to actualise projects and support both the demand 
                         and supply activities.
                     </p>
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center
+                    xs:mt-8 lg:mt-0">
                         <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
                             <span class="font-medium text-sm text-red-700">
                                 Coming soon
                             </span>
                         </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium">Learn more</a>
+                        <a href="#" 
+                        class="text-register-1 font-medium
+                        xs:text-[16px] lg:text-[18px]">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -474,23 +624,34 @@
 
 
     <section id="projects-carousel-section"
-        class="relative overflow-hidden flex flex-col   w-full h-[100vh] mt-16   
+        class="relative overflow-hidden flex flex-col   w-full mt-16   
         2xl:max-w-[1536px]
-        2xl:mt-16">
+        2xl:mt-16
+        xs:h-fit lg:h-[100vh]">
         <div class="absolute inset-0 pointer-events-none left-16" style="z-index: -1;">
             <svg class="w-full h-full" viewBox="0 0 200 100" preserveAspectRatio="none">
                 <path d="M50 0 A50 50 0 0 0 50 100 H200 V0 Z" fill="#f1f5f3" opacity="1" />
             </svg>
         </div>
 
-        <div id="latest-project-title" class="flex flex-col pt-12 justify-center items-start h-[20vh]  space-y-4">
-            <span class="font-medium text-4xl">
+        <div id="latest-project-title" 
+            class="flex flex-col pt-12 justify-center items-start
+            xs:space-y-2 lg:space-y-4
+            xs:h-fit lg:h-[20vh]">
+            <span 
+                class="font-medium text-4xl
+                xs:text-2xl">
                 Latest Projects
             </span>
-            <div class="flex justify-between w-full">
-                <p class="text-[20px] text-hero">These are completed or ongoing projects that offer a variety of options
+            <div class="justify-between w-full
+                xs:flex xs:flex-col lg:flex lg:flex-row">
+                <p class="text-[20px] text-hero
+                xs:text-[16px] md:text-[18px] lg:text-[20px]
+                xs:mb-4 lg:mb-0">These are completed or ongoing projects that offer a variety of options
                     to fit your preferences.</p>
-                <div class="flex items-center rounded-ecitizen bg-ahp px-4 gap-1 font-medium text-ahp">
+                <div class="flex items-center rounded-ecitizen bg-ahp px-4 gap-1 font-medium text-ahp
+                xs:w-fit 
+                xs:mb-8">
                     <p class="">Explore More</p>
                     <span class="material-symbols-outlined text-[18px]">
                         arrow_forward
@@ -499,9 +660,15 @@
             </div>
         </div>
 
-        <div class="flex w-full h-[65vh] gap-8">
-            <div id="carousel" class="grid grid-cols-3 grid-rows-1 gap-x-8  w-10/12 h-full">
-                <div id="grid-item" class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+        <div class="flex w-full gap-8
+        xs:h-fit lg:h-[65vh]
+        xs:relative lg:relative
+        xs:overflow-hidden">
+            <div id="carousel" class="grid grid-cols-3 grid-rows-1 gap-x-8  w-10/12 h-full
+            xs:w-full lg:w-10/12">
+                <div id="grid-item" class="bg-white rounded-lg shadow-lg overflow-hidden h-full
+                xs:w-auto xs:min-w-min
+                xs:h-fit lg:h-full">
                     <div class="relative h-[60%] p-4">
                         <img src="/images/house-image-001.jpg" alt="house-image-001.jpg"
                             class="w-full h-full object-cover rounded-lg">
@@ -547,7 +714,9 @@
                     </div>
                 </div>
 
-                <div id="grid-item-2" class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <div id="grid-item-2" class="bg-white rounded-lg shadow-lg overflow-hidden h-full
+                xs:w-auto xs:min-w-min
+                xs:hidden lg:block">
                     <div class="relative h-[60%] p-4">
                         <img src="/images/house-image-002.png" alt="house-image-002.png"
                             class="w-full h-full object-cover rounded-lg">
@@ -593,7 +762,9 @@
                     </div>
                 </div>
 
-                <div id="grid-item-3" class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                <div id="grid-item-3" class="bg-white rounded-lg shadow-lg overflow-hidden h-full
+                xs:w-auto xs:min-w-min
+                xs:hidden lg:block">
                     <div class="relative h-[60%] p-4">
                         <img src="/images/house-image-003.jpg" alt="house-image-003.jpg"
                             class="w-full h-full object-cover rounded-lg">
@@ -640,7 +811,8 @@
                 </div>
             </div>
 
-            <div class="relative">
+            <div class="relative
+            xs:hidden lg:block">
                 <div class="absolute flex-grow bg-white shadow-lg rounded-lg h-full w-96">
                     <div id="grid-item-4" class="bg-white h-full">
                         <div class="relative h-[60%] p-4">
@@ -693,22 +865,36 @@
         </div>
         <div 
             class="flex justify-between items-center h-[10vh] 
-            2xl:w-48">
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3"></div>
-            <div class="bg-green-500 rounded-ecitizen w-12 h-3"></div>
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3"></div>
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3"></div>
+            xs:w-32 lg:w-48 2xl:w-48">
+            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+            <div class="bg-green-500 rounded-ecitizen w-12 h-3
+            xs:w-4 xs:h-2 lg:w-12 lg:h-3"></div>
+            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
 
         </div>
     </section>
 
 
-    <section id="ruto-image" class="relative h-screen mt-16 -mx-32">
-        <div class="absolute inset-0 bg-ruto bg-cover bg-center bg-no-repeat bg-overlay"></div>
-        <div class="relative flex items-center justify-start h-full px-48">
-            <div id="content" class="flex flex-col items-start justify-center w-1/2 z-10 gap-8">
-                <div class="w-40 h-1 bg-green-500"></div>
-                <p class="font-extrabold text-white text-3xl">The right to housing is enshrined in the constitution of
+    <section id="ruto-image" class="flex relative h-screen mt-16 -mx-32
+    xs:h-fit lg:h-screen
+    xs:mx-0 lg:-mx-32">
+        <div class="absolute inset-0 bg-ruto bg-cover bg-center bg-no-repeat bg-overlay
+        xs:bg-cover xs:bg-center xs:bg-no-repeat xs:bg-overlay"></div>
+        <div class="relative flex items-center h-full px-48
+        xs:px-48 lg:px-48
+        xs:py-24 lg:py-0
+        xs:justify-center lg:justify-start">
+            <div id="content" class="relative flex flex-col items-start justify-center w-1/2 z-10
+            xs:w-full lg:w-1/2
+            xs:gap-4 lg:gap-8">
+                <div class="w-40 h-1 bg-green-500
+                xs:w-32 lg:w-40"></div>
+                <p class="font-extrabold text-white
+                xs:text-xl lg:text-3xl">The right to housing is enshrined in the constitution of
                     Kenya,
                     which provides that every person has the right to accessible and adequate housing,
                     and reasonable standards of sanitation</p>
@@ -719,28 +905,40 @@
 
     <section id="news-and-updates"
         class="relative overflow-hidden flex flex-col  w-full bg-faces pt-16
-        2xl:h-[100vh] 
+        xs:h-fit xl:h-screen 2xl:h-[100vh] 
         2xl:max-w-[1536px]">
         <div id="title" class="flex flex-col pt-12 justify-center items-start h-[20vh]  space-y-4 mb-8">
-            <span class="font-medium text-4xl">News & Updates</span>
-            <p class="text-[20px] text-hero">Stay up to date with the latest developments</p>
+            <span class="font-medium
+            xs:text-2xl sm:text-3xl lg:4xl">News & Updates</span>
+            <p class="text-hero
+            xs:text-[16px] md:text-[18px] lg:text-[20px]">Stay up to date with the latest developments</p>
         </div>
 
-        <div id="carousel-cont" class="relative flex gap-x-8  w-full h-[60vh]">
-            <div id="green-card" class="bg-register-btn rounded-xl p-8 text-white w-[30%]">
-                <div class="mb-8">
-                    <span class="bg-orange-500 text-white text-xl font-medium px-3 py-1 rounded-full">Notice</span>
+        <div id="carousel-cont" class="relative flex gap-x-8  w-full h-[60vh]
+        xs:h-fit lg:h-[60vh]">
+            <div id="green-card" class="bg-register-btn rounded-xl text-white w-[30%]
+            xs:p-4 lg:p-8
+            xs:w-full lg:w-[30%]">
+                <div class="
+                xs:mb-4 lg:mg-8">
+                    <span class="bg-orange-500 text-white font-medium px-3 py-1 rounded-full
+                    xs:text-sm lg:text-xl">Notice</span>
                 </div>
-                <h2 class="text-4xl font-bold mb-8">Illegal Sale/Allocation of Park Road Houses in Ngara Under the
+                <h2 class="text-4xl font-bold mb-8
+                xs:text-xl lg:text-4xl">Illegal Sale/Allocation of Park Road Houses in Ngara Under the
                     Affordable Housing Program</h2>
-                <p class="text-sm mb-12 text-gray-200">12 DEC 22</p>
+                <p class="text-sm mb-12 text-gray-200
+                xs:mb-8 lg:mb-12">12 DEC 22</p>
                 <button
-                    class="border border-white text-white px-8 py-2 rounded-full text-2xl hover:bg-white hover:text-green-500 transition-colors">
+                    class="border border-white text-white rounded-full hover:bg-white hover:text-green-500 transition-colors
+                    xs:px-4 xs:py-1 lg:px-8 lg:py-2
+                    xs:text-sm lg:text-2xl">
                     Learn More
                 </button>
             </div>
 
-            <div id="carousel-2" class="grid grid-cols-2 grid-rows-1 gap-x-8 justify-center  w-1/2 h-full">
+            <div id="carousel-2" class="grid grid-cols-2 grid-rows-1 gap-x-8 justify-center  w-1/2 h-full
+            xs:hidden lg:grid">
                 <div id="carousel-item" class="relative bg-white rounded-xl shadow-md overflow-hidden">
                     <img src="/images/ruto-news-and-updates-1.jpeg" alt="President speaking"
                         class="w-full h-1/2 object-cover">
@@ -757,7 +955,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="carousel-item" class="relative bg-white rounded-xl shadow-md overflow-hidden">
+                <div id="carousel-item" class="relative bg-white rounded-xl shadow-md overflow-hidden
+                xs:hidden lg:block">
                     <img src="/images/ruto-news-and-updates-2.jpeg" alt="President speaking"
                         class="w-full h-1/2 object-cover">
                     <div class="p-4">
@@ -775,7 +974,8 @@
 
             <div class="relative w-1/5 h-full">
                 <div id="carousel-item-last"
-                    class="absolute bg-white h-full w-[23rem] rounded-xl shadow-md overflow-hidden">
+                    class="absolute bg-white h-full w-[23rem] rounded-xl shadow-md overflow-hidden
+                    xs:hidden lg:block">
                     <img src="/images/ruto-news-and-updates-3.jpg" alt="President speaking"
                         class="w-full h-1/2 object-cover">
                     <div class="p-4">
@@ -793,51 +993,83 @@
         </div>
 
         <div id="carousel-scroll-things" 
-            class="h-[10vh] flex justify-between items-center 
-            2xl:w-48">
-            <div class="bg-white rounded-ecitizen w-8 h-3"></div>
-            <div class="bg-gray-500 rounded-ecitizen w-12 h-3"></div>
-            <div class="bg-white rounded-ecitizen w-8 h-3"></div>
-            <div class="bg-white rounded-ecitizen w-8 h-3"></div>
+            class="flex justify-between items-center 
+            xs:w-24 lg:w-48 2xl:w-48
+            xs:h-fit lg:h-[10vh]
+            xs:my-8 lg:my-0">
+            <div class="bg-white rounded-ecitizen
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+            <div class="bg-gray-500 rounded-ecitizen
+            xs:w-6 xs:h-2 lg:w-12 lg:h-3"></div>
+            <div class="bg-white rounded-ecitizen
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+            <div class="bg-white rounded-ecitizen
+            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
         </div>
     </section>
 
 
 
     <section id="footer-section" 
-        class="flex flex-col  w-full h-[33vh] gap-4 mt-12
+        class="flex flex-col  w-full h-[33vh] gap-4 mt-24
         2xl:max-w-[1536px]">
-        <div id="top" class="flex justify-between items-center w-full h-[50%]">
-            <div class="flex items-center w-96 gap-4">
-                <img src="images/coat-of-arms-official.png" alt="#" class="w-24">
-                <div id="hr-2" class="bg-gray-300 h-24 w-[1px]"></div>
-                <div class="flex flex-col gap-2 justify-center">
-                    <span class="font-black">Ministry of Lands, Public-works, Housing and Urban Development</span>
+        <div id="top" class="items-center w-full h-[50%]
+        xs:flex xs:flex-col lg:flex lg:flex-row
+        xs:h-fit lg:h-fit xl:h-[50%]
+        xs:px-0 lg:px-0
+        xs:justify-center lg:justify-between">
+            <div class="flex items-center gap-4
+            xs:w-full lg:w-80 xl:w-96
+            xs:items-center lg:items-center
+            xs:mb-4 lg:mb-0
+            xs:justify-center lg:justify-normal
+            ">
+                <img src="images/coat-of-arms-official.png" alt="#" class=" 
+                xs:w-20 lg:w-24">
+                <div id="hr-2" class="bg-gray-300
+                xs:h-16 lg:h-24
+                xs:w-[1px] lg:w-[1px]
+                "></div>
+                <div class="flex flex-col gap-2 justify-center
+                xs:text-[11px] lg:text-[12px] xl:text-[14px]
+                ">
+                    <span class="font-black ">Ministry of Lands, Public-works, Housing and Urban Development</span>
                     <span class="font-bold text-gray-700">State Department of Housing & Urban Development</span>
                 </div>
             </div>
-            <div class="text-gray-700 text-[20px]">
-                <p>For enquiries, contact Huduma Centre - 0206900020</p>
+            <div class="text-gray-700 text-[20px] flex
+            xs:w-full xs:justify-center lg:w-auto lg:justify-normal
+            xs:text-sm md:text-[16px] lg:text-[16px] xl:text-[18px]
+            xs:mb-4 lg:mb-0
+            ">
+                <p class="xs:text-center lg:text-start">For enquiries, contact Huduma Centre - 0206900020</p>
             </div>
             <div class>
-                <img src="images/boma_yangu_logo.png" alt="#" class="w-48">
+                <img src="images/boma_yangu_logo.png" alt="#" class="
+                xs:w-24 lg:w-32 xl:w-40">
             </div>
         </div>
 
-        <div id="hr-cont" class="w-full px-16">
+        <div id="hr-cont" class="w-full px-16
+        xs:px-0 lg:px-0 2xl:px-0
+        xs:mt-4 xs:mb-8 lg:mt-4 lg:mb-4 xl:mb-0 xl:mt-0">
             <div id="hr" class="w-full bg-gray-300 h-[1px]"></div>
         </div>
 
-        <div id="top" class="flex justify-between items-center w-full h-[30%]">
+        <div id="top" class="flex justify-between items-center w-full h-[30%]
+        xs:flex xs:flex-col lg:flex lg:flex-row
+        xs:gap-4 lg:gap-0">
             <div class="flex items-center w-fit">
-                <span class="text-gray-700">Copyright © 2023 <a href="#" class="underline decoration-gray-700"> Republic of
+                <span class="text-gray-700
+                xs:text-sm lg:text-sm xl:text-[16px]">Copyright © 2023 <a href="#" class="underline decoration-gray-700"> Republic of
                     Kenya</a>. All rights reserved.</span>
             </div>
             <div class="flex text-hero justify-between gap-8 font-semibold">
                 <p>Terms & Conditions</p>
                 <p>Privacy Policy</p>
             </div>
-            <div class="flex gap-8">
+            <div class="flex gap-8
+            xs:mb-8 lg:mb-0">
                 <i class='bx bxl-twitter text-gray-400 text-4xl'></i>
                 <i class='bx bxl-linkedin-square text-gray-400 text-4xl'></i>
                 <i class='bx bxl-facebook-circle text-gray-400 text-4xl'></i>
