@@ -605,7 +605,7 @@
     <section id="projects-carousel-section" class="relative overflow-hidden flex flex-col   w-full mt-16   
         2xl:max-w-[1536px]
         2xl:mt-16
-        xs:h-fit lg:h-[100vh]">
+        xs:h-fit 2xl:h-fit">
         <div class="absolute inset-0 pointer-events-none left-16" style="z-index: -1;">
             <svg class="w-full h-full" viewBox="0 0 200 100" preserveAspectRatio="none">
                 <path d="M50 0 A50 50 0 0 0 50 100 H200 V0 Z" fill="#f1f5f3" opacity="1" />
@@ -636,10 +636,13 @@
             </div>
         </div>
 
-        <div x-data="carousel()" class="relative w-full overflow-hidden h-fit border-section">
-            <div x-ref="carouselContainer" class="flex transition-transform duration-300 ease-in-out border-parent">
+        <div x-data="projectsCarousel('projectsCarousel')" x-init="init()"
+            class="relative w-full overflow-hidden h-full border-section">
+            <div x-ref="projectsCarouselContainer"
+                class="flex transition-transform duration-300 ease-in-out border-parent">
                 <%= for _i <- 1..5 do %>
-                    <div class="flex-shrink-0 w-full xs:w-full sm:w-1/2 md:w-[40%] lg:w-1/3 xl:w-1/3 p-4">
+                    <div 
+                        class="flex-shrink-0 w-full xs:w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4 h-fit border-child">
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden h-fit pb-8">
                             <div class="relative h-[60%] p-4">
                                 <img src="/images/house-image-001.jpg" alt="house-image-001.jpg"
@@ -694,7 +697,7 @@
                     <% end %>
             </div>
 
-            <button @click="prev()"
+            <button @click="prev()" x-show="currentIndex > 0"
                 class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -702,7 +705,7 @@
                 </svg>
             </button>
 
-            <button @click="next()"
+            <button @click="next()" x-show="currentIndex < totalItems - itemsPerView"
                 class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -712,44 +715,69 @@
         </div>
 
         <script>
-            function carousel() {
-                return {
+            // Force reload by adding a timestamp
+            document.currentScript.setAttribute('data-version', Date.now());
+
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('projectsCarousel', (carouselId) => ({
+                    carouselId,
                     currentIndex: 0,
                     itemsPerView: 3,
                     totalItems: 5,
 
                     init() {
                         this.updateItemsPerView();
-                        this.updateTransform();
                         window.addEventListener('resize', () => {
                             this.updateItemsPerView();
-                            this.updateTransform();
                         });
                     },
 
                     updateItemsPerView() {
                         const width = window.innerWidth;
-                        if (width >= 1280) this.itemsPerView = 3;
-                        else if (width >= 1024) this.itemsPerView = 3;
-                        else if (width >= 640) this.itemsPerView = 2;
-                        else this.itemsPerView = 1;
+                        if (width >= 1536) {
+                            this.itemsPerView = 3; // 2xl: show 3 items
+                        } else if (width >= 1280) {
+                            this.itemsPerView = 3; // xl: show 2 items
+                        } else if (width >= 1024) {
+                            this.itemsPerView = 3; // lg: show 3 items
+                        } else if (width >= 768) {
+                            this.itemsPerView = 2; // md: show 2 items
+                        } else if (width >= 640) {
+                            this.itemsPerView = 1; // sm: show 2 items
+                        } else {
+                            this.itemsPerView = 1; // xs: show 1 item
+                        }
+                        console.log(`${this.carouselId} - Items per view:`, this.itemsPerView); // Debug log
+                        this.updateTransform();
                     },
 
                     updateTransform() {
-                        this.$refs.carouselContainer.style.transform = `translateX(-${this.currentIndex * (100 / this.itemsPerView)}%)`;
+                        const translateX = this.currentIndex * (100 / this.itemsPerView);
+                        this.$refs[`${this.carouselId}Container`].style.transform = `translateX(-${translateX}%)`;
                     },
 
                     next() {
-                        this.currentIndex = Math.min(this.currentIndex + 1, this.totalItems - this.itemsPerView);
+                        console.log(`${this.carouselId} - Next clicked`); // Debug log
+                        const maxIndex = this.totalItems - this.itemsPerView;
+                        this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
                         this.updateTransform();
                     },
 
                     prev() {
+                        console.log(`${this.carouselId} - Prev clicked`); // Debug log
                         this.currentIndex = Math.max(this.currentIndex - 1, 0);
                         this.updateTransform();
                     }
-                };
-            }
+
+                }
+
+                )
+
+
+                );
+
+            });
+
         </script>
 
 
@@ -1095,14 +1123,15 @@
                 </div>
 
                 <!-- Carousel items -->
-                <div x-data="advancedCarousel()" id="carousel-cont-x"
-                    class = "flex transition-transform duration-300 ease-in-out w-[70%] xs:w-full xl:w-[70%] overflow-hidden h-full border-section">
-                    <div x-ref="carouselContainer2"
-                        class="flex transition-transform duration-300 ease-in-out h-full w-full border-parent">
+                <div x-data="newsCarousel('newsCarousel')" x-init="init()" id="carousel-cont-x"
+                    class="relative flex transition-transform duration-300 ease-in-out w-[70%] xs:w-full xl:w-[70%] overflow-hidden h-full justify-center border-section">
+                    <div x-ref="newsCarouselContainer"
+                        class="flex transition-transform duration-300 ease-in-out h-full w-full self-center border-parent">
                         <%= for _i <- 1..5 do %>
-                            <div
-                                class="flex-shrink-0 w-full xs:w-full sm:w-1/2 md:w-[40%] lg:w-[40%] xl:w-[40%] p-4 h-full">
-                                <div class="relative bg-white rounded-xl shadow-md overflow-hidden h-full">
+                            <div x-bind:style="{ width: `${100 / itemsPerView}%` }" 
+                                class="flex-shrink-0 w-full xs:w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/2 2xl:w-1/3 p-4 h-full border-child">
+                                <div class="relative bg-white rounded-xl shadow-md overflow-hidden h-full w-full
+                                xs:pb-0 xl:pb-4 2xl:pb-16">
                                     <img src="/images/ruto-news-and-updates-1.jpeg" alt="President speaking"
                                         class="w-full h-1/2 object-cover">
                                     <div class="p-4">
@@ -1112,7 +1141,7 @@
                                         </div>
                                         <div class="flex flex-col justify-between h-full">
                                             <h3 class="text-2xl font-medium w-10/12
-                        xs:mb-24 md:mb-24 xl:mb-32">Affordable housing plan takes
+                                            xs:mb-24 md:mb-24 xl:mb-36">Affordable housing plan takes
                                                 shape as President unveils first phase</h3>
                                             <p class="text-gray-400 text-sm">12 MAY 22</p>
                                         </div>
@@ -1121,88 +1150,86 @@
                             </div>
                             <% end %>
                     </div>
+
+                    
+
+                    <!-- Navigation buttons -->
+                    <button @click="prev2()" x-show="currentIndex > 0" 
+                        class="absolute xs:left-0 lg:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <button @click="next2()" x-show="currentIndex < totalItems - itemsPerView"
+                        class="absolute xs:right-0 lg:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
 
 
-                <!-- Navigation buttons -->
-                <button @click="prev2()"
-                    class="absolute xs:left-0 lg:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
 
-                <button @click="next2()"
-                    class="absolute xs:right-0 lg:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
             </div>
         </div>
 
         <!-- Carousel indicators -->
-        <!--
-        <div
-            class="flex justify-between items-center xs:w-24 lg:w-48 2xl:w-48 xs:h-fit lg:h-[10vh] xs:my-8 lg:my-0 mx-auto">
-            <%= for _i <- 0..3 do %>
-                <div class={"rounded-ecitizen cursor-pointer transition-all duration-300 #{if i==0,
-                    do: "bg-gray-500 xs:w-6 xs:h-2 lg:w-12 lg:h-3" , else: "bg-white xs:w-4 xs:h-2 lg:w-8 lg:h-3" }"}
-                    x-on:click={"goToSlide(#{i})"} x-bind:class={"{'bg-gray-500 xs:w-6 xs:h-2 lg:w-12 lg:h-3':
-                    currentIndex===#{i}, 'bg-white xs:w-4 xs:h-2 lg:w-8 lg:h-3' : currentIndex !==#{i}}"}>
-                </div>
-                <% end %>
-        </div>
-        -->
+
 
         <script>
-            function advancedCarousel() {
-                return {
+            // Force reload by adding a timestamp
+            document.currentScript.setAttribute('data-version', Date.now());
+
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('newsCarousel', (carouselId) => ({
+                    carouselId,
                     currentIndex: 0,
                     itemsPerView: 3,
                     totalItems: 5,
-
                     init() {
                         this.updateItemsPerView();
-                        this.updateTransform();
                         window.addEventListener('resize', () => {
                             this.updateItemsPerView();
-                            this.updateTransform();
                         });
                     },
-
                     updateItemsPerView() {
                         const width = window.innerWidth;
-                        if (width >= 1280) {
-                            this.itemsPerView = 2.5;  // xl and 2xl: show 2.5 items
+                        if (width >= 1536) {
+                            this.itemsPerView = 3; // 2xl: show 3 items
+                        } else if (width >= 1280) {
+                            this.itemsPerView = 2; // xl: show 2 items
                         } else if (width >= 1024) {
-                            this.itemsPerView = 2.5;  // lg: show 2.5 items
+                            this.itemsPerView = 3; // xl: show 2 items
                         } else if (width >= 768) {
-                            this.itemsPerView = 2;    // md: show 2 items
+                            this.itemsPerView = 2; // md: show 2 items
                         } else if (width >= 640) {
-                            this.itemsPerView = 2;    // sm: show 2 items
+                            this.itemsPerView = 2; // sm: show 2 items
                         } else {
-                            this.itemsPerView = 1;    // xs: show 1 item
+                            this.itemsPerView = 1; // xs: show 1 item
                         }
-                    },
-
-                    updateTransform() {
-                        this.$refs.carouselContainer2.style.transform = `translateX(-${this.currentIndex * (100 / this.itemsPerView)}%)`;
-                    },
-
-                    next2() {
-                        this.currentIndex = Math.min(this.currentIndex + 1, this.totalItems - this.itemsPerView);
+                        console.log(`${this.carouselId} - Items per view:`, this.itemsPerView); // Debug log
                         this.updateTransform();
                     },
-
+                    updateTransform() {
+                        const translateX = this.currentIndex * (100 / this.itemsPerView);
+                        this.$refs[`${this.carouselId}Container`].style.transform = `translateX(-${translateX}%)`;
+                    },
+                    next2() {
+                        console.log(`${this.carouselId} - Next clicked`); // Debug log
+                        const maxIndex = this.totalItems - this.itemsPerView;
+                        this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
+                        this.updateTransform();
+                    },
                     prev2() {
+                        console.log(`${this.carouselId} - Prev clicked`); // Debug log
                         this.currentIndex = Math.max(this.currentIndex - 1, 0);
                         this.updateTransform();
                     }
-                };
-            }
+                }));
+            });
         </script>
     </section>
 
