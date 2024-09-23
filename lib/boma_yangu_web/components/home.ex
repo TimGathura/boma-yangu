@@ -5,7 +5,7 @@ defmodule BomaYanguWeb.Components.Home do
 
   def home(assigns) do
     ~H"""
-    <.home_live_component/>
+    <.home_live_component />
     """
   end
 end

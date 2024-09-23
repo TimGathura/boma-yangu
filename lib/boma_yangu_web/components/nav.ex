@@ -5,7 +5,7 @@ defmodule BomaYanguWeb.Components.Nav do
 
   def nav(assigns) do
     ~H"""
-    <.nav_component/>
+    <.nav_component />
     """
   end
 end

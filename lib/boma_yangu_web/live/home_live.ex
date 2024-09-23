@@ -12,10 +12,7 @@ defmodule BomaYanguWeb.HomeLive do
 
   def render(assigns) do
     ~H"""
-
-    <.home_live_component/>
+    <.home_live_component />
     """
   end
-
-  
 end

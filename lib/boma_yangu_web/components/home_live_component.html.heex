@@ -1,978 +1,1293 @@
-<section id="overall-parent" class="roboto-regular flex flex-col items-center
-    xs:px-4 sm:px-8 md:px-8 lg:px-4 xl:px-8 2xl:px-8 3xl:px-32
-    overflow-x-hidden min-w-[320px]">
-
-    <!--Nav Section -->
-    <section id="nav-bar-cont"
-        class="fixed z-50 flex justify-center w-full bg-white bg-opacity-80 backdrop-blur-sm shadow-md">
-        <div id="nav-cont" class="flex justify-between items-center text-gray-700 font-bold w-full
-            xs:px-4 sm:px-8 md:px-8 lg:px-4 xl:px-8 2xl:px-0 3xl:px-0
-            transition-all duration-300 ease-in-out
-            2xl:max-w-[1536px]
-            xs:h-[48px] lg:h-[80px]">
-            <div id="logo" class="flex items-center">
-                <img src="images/boma_yangu_logo.png" alt="#" class="xs:w-32 sm:w-48 md:w-48 lg:w-48 xl:w-60">
-            </div>
-            <div id="nav-options" class="hidden xl:flex">
-                <ul class="flex justify-between items-center gap-12">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li class="flex">
-                        <a href="#" class="flex gap-1">
-                            <p>Participants</p>
-                            <span class="material-symbols-outlined text-gray-700">
-                                keyboard_arrow_down
-                            </span>
-                        </a>
-                    </li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">News & info</a></li>
-                    <li><a href="#">Tenders</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </div>
-            <div class="hidden xl:flex">
-                <ul class="flex justify-between items-center gap-12">
-                    <li>
-                        <button id="log-in" class="hover:text-green-600  transition duration-300 ease-in-out">Log
-                            in</button>
-                    </li>
-                    <li
-                        class="bg-register-btn text-white text-1xl rounded-50px px-4 py-2 hover:bg-white hover:border-2 hover:border-green-600 hover:rounded-50px transition duration-300 ease-in-out">
-                        <button id="register" class="hover:text-green-500  transition duration-300">Register</button>
-                    </li>
-                </ul>
-            </div>
-            <button id="hamburger" class="xl:hidden text-gray-700 hover:text-gray-900 transition duration-300">
-                <i class='bx bx-menu text-3xl'></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu"
-        class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
-        <div class="flex justify-end p-4">
-            <button id="close-menu" class="text-gray-700 hover:text-gray-900 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-        <ul class="flex flex-col space-y-4 p-4">
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">Home</li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">Projects</li>
-            <li class="flex gap-1 text-gray-700 hover:text-gray-900 transition duration-300">
-                <p>Participants</p>
-                <span class="material-symbols-outlined">keyboard_arrow_down</span>
-            </li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">About</li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">News & info</li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">Tenders</li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">Help</li>
-            <li class="text-gray-700 hover:text-gray-900 transition duration-300">Log in</li>
-            <li
-                class="bg-register-btn text-white text-center py-2 px-4 rounded-full hover:bg-opacity-90 transition duration-300">
-                Register</li>
+<section
+  id="overall-parent"
+  class="roboto-regular flex flex-col items-center xs:px-4 sm:px-8 md:px-8 lg:px-4 xl:px-8 2xl:px-8 3xl:px-32 overflow-x-hidden min-w-[320px]"
+>
+  <!--Nav Section -->
+  <section
+    id="nav-bar-cont"
+    class="fixed z-50 flex justify-center w-full bg-white bg-opacity-80 backdrop-blur-sm shadow-sm"
+  >
+    <div
+      id="nav-cont"
+      class="flex justify-between items-center text-gray-700 font-bold w-full xs:px-4 sm:px-8 md:px-8 lg:px-4 xl:px-8 2xl:px-0 3xl:px-0 transition-all duration-300 ease-in-out 2xl:max-w-[1536px] xs:h-[48px] lg:h-[80px]"
+    >
+      <div id="logo" class="flex items-center">
+        <img
+          src="images/boma_yangu_logo.png"
+          alt="#"
+          class="xs:w-32 sm:w-48 md:w-48 lg:w-48 xl:w-60"
+        />
+      </div>
+      <div id="nav-options" class="hidden xl:flex">
+        <ul class="flex justify-between items-center gap-12">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li class="flex">
+            <a href="#" class="flex gap-1">
+              <p>Participants</p>
+              <span class="material-symbols-outlined text-gray-700">
+                keyboard_arrow_down
+              </span>
+            </a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">News & info</a></li>
+          <li><a href="#">Tenders</a></li>
+          <li><a href="#">Help</a></li>
         </ul>
+      </div>
+      <div class="hidden xl:flex">
+        <ul class="flex justify-between items-center gap-12">
+          <li>
+            <button
+              id="log-in"
+              class="hover:text-green-600 transition duration-300 ease-in-out"
+            >
+              Log in
+            </button>
+          </li>
+          <li
+            class="bg-register-btn text-white text-1xl rounded-50px px-4 py-2 hover:bg-white hover:border-2 hover:border-green-600 hover:rounded-50px transition duration-300 ease-in-out"
+          >
+            <button
+              id="register"
+              class="hover:text-green-500 transition duration-300"
+            >
+              Register
+            </button>
+          </li>
+        </ul>
+      </div>
+      <button
+        id="hamburger"
+        class="xl:hidden text-gray-700 hover:text-gray-900 transition duration-300"
+      >
+        <i class="bx bx-menu text-3xl"></i>
+      </button>
+    </div>
+  </section>
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+  >
+    <div class="flex justify-end p-4">
+      <button
+        id="close-menu"
+        class="text-gray-700 hover:text-gray-900 transition duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-4 p-4">
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        Home
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        Projects
+      </li>
+      <li
+        class="flex gap-1 text-gray-700 hover:text-gray-900 transition duration-300"
+      >
+        <p>Participants</p>
+        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        About
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        News & info
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        Tenders
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        Help
+      </li>
+      <li class="text-gray-700 hover:text-gray-900 transition duration-300">
+        Log in
+      </li>
+      <li
+        class="bg-register-btn text-white text-center py-2 px-4 rounded-full hover:bg-opacity-90 transition duration-300"
+      >
+        Register
+      </li>
+    </ul>
+  </div>
+  <!-- Overlay -->
+  <div
+    id="overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+  ></div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
+    const overlay = document.getElementById("overlay");
+
+    function openMenu() {
+      mobileMenu.classList.remove("translate-x-full", "slide-out");
+      mobileMenu.classList.add("slide-in");
+      overlay.classList.remove("hidden");
+    }
+
+    function closeMenuFunc() {
+      mobileMenu.classList.remove("slide-in");
+      mobileMenu.classList.add("slide-out");
+      setTimeout(() => {
+        mobileMenu.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+      }, 300);
+    }
+
+    hamburger.addEventListener("click", openMenu);
+    closeMenu.addEventListener("click", closeMenuFunc);
+    overlay.addEventListener("click", closeMenuFunc);
+  </script>
+
+  <!-- Body Section -->
+  <section
+    id="main-hero-cont"
+    class="flex flex-col justify-between h-[130vh] w-full xs:h-fit lg:h-screen sm:flex sm:flex-col md:flex md:flex-col md:justify-between lg:flex lg:flex-row lg:justify-between 2xl:max-w-[1536px] max-w-[1536px]"
+  >
+    <div
+      id="hero-content-cont"
+      class="flex flex-col items-start w-full gap-8 transition-all duration-300 ease-in-out xs:w-full sm:w-full md:w-full lg:w-[40%] lg:h-[60%] xl:w-[35%] xl:h-[40%] w-35pct h-[65%] xs:gap-8 sm:gap-8 md:gap-8 lg:gap-[3rem] xl:gap-[4rem] 2xl:gap-[6.7rem] xs:mt-32 sm:mt-36 md:mt-36 lg:mt-36 xl:mt-36 2xl:mt-36"
+    >
+      <div
+        class="flex flex-col items-start gap-8 sm:gap-8 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-8"
+      >
+        <p
+          class="text-gray-900 font-medium w-full text-4xl sm:w-full lg:w-10/12 xs:text-3xl sm:text-5xl md:text-5xl lg:text-6xl"
+        >
+          Welcome to Boma Yangu
+        </p>
+
+        <p class="text-hero text-[16px] sm:text-[18px] sm:text-hero">
+          Boma Yangu is the gateway to the Affordable Housing Program (AHP). It
+          is an opportunity to start the journey towards fulfilling your dream
+          of owning a home in an affordable way.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-start gap-8 w-full">
+        <button
+          class="bg-register-btn py-3 px-16 text-white font-medium rounded-50px"
+        >
+          Register
+        </button>
+
+        <div
+          class="flex justify-between items-center bg-ecitizen rounded-ecitizen xs:p-4 xl:p-8 xs:flex xs:flex-col-reverse md:flex md:flex-row xs:w-full md:w-full xs:gap-0 lg:gap-4"
+        >
+          <p class="w-2/4 font-medium text-ahp xs:w-full md:w-2/4 lg:w-2/4">
+            We are making it simpler. You can now access Boma Yangu using your
+            eCitizen account
+          </p>
+          <div class="flex justify-between items-center">
+            <img src="images/e_citizen.png" alt="#" class="w-48" />
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Overlay -->
-    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    <div
+      id="image-content-cont"
+      class="flex justify-center mt-24 transition-all duration-300 ease-in-out sm:mt-8 lg:mt-36 md:w-full lg:h-[55%] lg:w-[55%] xl:h-[60%] xl:w-[60%] 2xl:h-[65%] 2xl:w-[65%] md:px-4 lg:px-0"
+    >
+      <div class="flex rounded-lg h-full">
+        <img src="images/hero_dummy.png" alt="#" class="h-full" />
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="faces-section-cont"
+    class="flex flex-col w-full gap-16 mt-0 2xl:max-w-[1536px] xs:h-fit lg:h-fit"
+  >
+    <div
+      id="housing-fundamental-cont"
+      class="flex justify-between rounded-[10px] bg-faces relative overflow-visible xs:flex xs:flex-col lg:flex lg:flex-row"
+    >
+      <div
+        class="flex justify-center w-35pct relative xs:w-full lg:w-fit xs:p-4"
+      >
+        <div
+          class="flex justify-center absolute -top-12 xs:relative xs:top-0 xs:w-full lg:w-fit lg: xl:absolute xl:w-3/4 xl:-top-12"
+        >
+          <img src="images/faces_page2.png" alt="#" class="w-full" />
+        </div>
+        <div class="invisible w-3/4 xs:hidden xl:block">
+          <img src="images/faces_page2.png" alt="#" class="w-full" />
+        </div>
+      </div>
+      <div class="flex justify-center w-65pct xs:w-full lg:w-full">
+        <div
+          class="flex flex-col items-start justify-center gap-4 w-10/12 lg:mr-6 xs:w-full lg:w-10/12 xs:px-8 lg:px-0"
+        >
+          <h2
+            class="font-medium w-[60%] xs:text-2xl sm:text-3xl lg:text-4xl xs: xs:font-normal lg:font-medium xs:w-full lg:w-[60%]"
+          >
+            Housing is a fundamental human need
+          </h2>
+          <p
+            class="text-hero xs:text-[16px] lg:text[18px] xs:w-full lg:w-10/12 xs:mb-4 lg:mb-0"
+          >
+            The right to housing is embedded in the constitution of Kenya, which
+            provides that every person has the right to accessible and adequate
+            housing, and to reasonable standards of sanitation. Kenya's growing
+            economy translates into an expanding middle class, therefore
+            increasing demand for housing.
+          </p>
+          <div class="xs:self-center lg:self-end">
+            <div
+              class="flex items-center justify-center rounded-50px px-4 bg-ahp text-ahp gap-[6px] xs:mb-8 lg:mb-0"
+            >
+              <p class="font-medium xs:text-[20px] md:text-[18px]">About AHP</p>
+              <span
+                class="material-symbols-outlined xs:text-[20px] md:text-[18px]"
+              >
+                arrow_forward
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="400+-cont"
+      class="items-center justify-center bg-boma-green gap-40 py-16 h-fit text-[18px] xs:flex xs:flex-col sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex lg:flex-row xs:gap-8 lg:gap-20 xl:gap-32 xs:py-8 lg:py-16 xs:rounded-[20px] lg:rounded-[50px]"
+    >
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h2 class="font-bold text-white xs:text-5xl xl:text-7xl">400+</h2>
+        <p class="font-medium text-black">Projects completed</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h2 class="font-bold text-white xs:text-5xl xl:text-7xl">45,000</h2>
+        <p class="font-medium text-black">Home owners</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h2 class="font-bold text-white xs:text-5xl xl:text-7xl">334,152</h2>
+        <p class="font-medium text-black">Registered Applicants</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h2 class="font-bold text-white xs:text-5xl xl:text-7xl">200+</h2>
+        <p class="font-medium text-black">MSME's on board</p>
+      </div>
+    </div>
+
+    <div class="flex xs:items-center lg:items-start">
+      <p
+        class="text-4xl font-medium xs:w-full lg:w-1/2 xl:w-1/3 xs:text-2xl sm:text-3xl lg:text-4xl"
+      >
+        Start the journey to home ownership in
+        <span class="text-register-1">3 simple steps</span>
+      </p>
+    </div>
+  </section>
+
+  <section
+    id="3-simple-steps"
+    class="flex flex-col justify-between w-full 2xl:h-[240vh] mt-24 2xl:max-w-[1536px] xs:h-fit lg:h[240vh]"
+  >
+    <div
+      id="1-register-cont"
+      class="items-center justify-between pt-4 w-full h-27-5pct xs:flex xs:flex-col lg:flex lg:flex-row"
+    >
+      <div
+        id="content"
+        class="flex flex-col h-full xs:w-full lg:w-1/2 xs:items-start lg:items-start xs:mb-0 lg:mb-12"
+      >
+        <div
+          id="1-register"
+          class="flex items-center gap-4 w-full xs:py-0 lg:py-8 xs:mb-4 lg:mb-0"
+        >
+          <div
+            class="items-center justify-center border-register-4 rounded-full xs:border-2 lg:border-4 xs:w-8 xs:h-8 lg:w-12 lg:h-12 xs:p-4 lg:p-0 xs:flex lg:inline-flex"
+          >
+            <span
+              class="text-register-1 xs:font-medium lg:font-bold xs:text-xl lg:text-2xl"
+            >
+              1
+            </span>
+          </div>
+          <p
+            class="xs:font-medium lg:font-medium xs:text-2xl sm:text-3xl lg:text-4xl"
+          >
+            Register
+          </p>
+        </div>
+        <div
+          id="1-text"
+          class="flex flex-col text-hero space-y-2 xs:w-full lg:w-10/12 xs:text-[16px] lg:text-[18px]"
+        >
+          <p>
+            Registration is free. Complete your profile by submitting your
+            personal details and housing preference (the type of house you are
+            applying for). Once registered, your details will be verified
+            through the relevant Government offices. To register, you must meet
+            the conditions below:
+          </p>
+          <ul class="list-disc list-inside px-2">
+            <li>Must be a <span class="font-bold">Kenyan Citizen</span></li>
+            <li>
+              Must be above <span class="font-bold">18 years</span> of age
+            </li>
+            <li>
+              Must have a valid
+              <span class="font-bold">National Identity Card</span>
+            </li>
+          </ul>
+        </div>
+        <div
+          id="register-now"
+          class="flex border-register-1 rounded-50px mt-16 xs:px-4 xs:py-2 lg:px-8 lg:py-4 xs:mb-8 lg:mb-0"
+        >
+          <span class="font-medium xs:text-[16px] lg:text-[18px]">
+            Register Now
+          </span>
+        </div>
+      </div>
+      <div
+        id="register-image"
+        class="flex justify-center h-full xs:w-full lg:w-1/2"
+      >
+        <div class="flex h-fit mb-6">
+          <img
+            src="images/3_easy_steps_1.png"
+            alt="#"
+            class="max-w-full h-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="2-save-cont"
+      class="items-center justify-between bg-faces h-32-5pct pt-12 xs:pb-0 lg:pb-12 xs:flex xs:flex-col-reverse xs:gap-8 lg:flex lg:flex-row lg:gap-0"
+    >
+      <div
+        id="register-image"
+        class="flex justify-center h-full xs:w-full lg:w-1/2"
+      >
+        <div class="flex h-fit mb-6">
+          <img src="images/3_easy_steps_2.png" alt="#" class="" />
+        </div>
+      </div>
+
+      <div
+        id="content"
+        class="flex flex-col h-full xs:w-full lg:w-1/2 xl:w-1/2 xs:items-start lg:items-start xs:pl-0 lg:pl-16 xl:pl-36"
+      >
+        <div
+          id="2-save"
+          class="flex items-center gap-4 w-full xs:py-0 lg:py-8 xs:mb-4 lg:mb-0"
+        >
+          <div
+            class="items-center justify-center border-register-4 rounded-full xs:border-2 lg:border-4 xs:w-8 xs:h-8 lg:w-12 lg:h-12 xs:p-4 lg:p-0 xs:flex lg:inline-flex"
+          >
+            <span
+              class="text-register-1 xs:font-medium lg:font-bold xs:text-xl lg:text-2xl"
+            >
+              2
+            </span>
+          </div>
+          <p
+            class="xs:font-medium lg:font-medium xs:text-2xl sm:text-3xl lg:text-4xl"
+          >
+            Save
+          </p>
+        </div>
+        <div
+          id="2-text"
+          class="flex flex-col text-hero space-y-2 xs:w-full lg:w-10/12 xs:text-[16px] lg:text-[18px]"
+        >
+          <p>
+            Upon registration, you can start saving any amount you wish to your
+            account on Boma Yangu.
+          </p>
+          <p>
+            You can save via USSD or through the payment options available on
+            the web portal.
+          </p>
+          <p>
+            You can also view all the available projects on Boma Yangu and add
+            them to your wish list or select them as your preferred unit.
+          </p>
+          <p>
+            Selecting a preferred unit means that your savings will count
+            towards the 10% deposit required for a unit to be allocated to you.
+            Please note that:
+          </p>
+          <ul class="list-disc list-inside px-2">
+            <li>Monthly saving are not capped</li>
+            <li>
+              You can request a refund on your voluntary savings, which will not
+              be taxed at time of withdrawal.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="3-own-cont"
+      class="items-center justify-between pt-12 h-27-5pct xs:flex xs:flex-col lg:flex lg:flex-row"
+    >
+      <div
+        id="content"
+        class="flex flex-col h-full xs:w-full lg:w-1/2 xs:items-start lg:items-start"
+      >
+        <div
+          id="3-own"
+          class="flex items-center gap-4 w-full xs:py-0 lg:py-8 xs:mb-4 lg:mb-0"
+        >
+          <div
+            class="items-center justify-center border-register-4 rounded-full xs:border-2 lg:border-4 xs:w-8 xs:h-8 lg:w-12 lg:h-12 xs:p-4 lg:p-0 xs:flex lg:inline-flex"
+          >
+            <span
+              class="text-register-1 xs:font-medium lg:font-bold xs:text-xl lg:text-2xl"
+            >
+              3
+            </span>
+          </div>
+          <p
+            class="xs:font-medium lg:font-medium xs:text-2xl sm:text-3xl lg:text-4xl"
+          >
+            Own
+          </p>
+        </div>
+        <div
+          id="1-text"
+          class="flex flex-col text-hero space-y-2 xs:w-full lg:w-10/12 xs:mb-8 lg:mb-0 xs:text-[16px] lg:text-[18px]"
+        >
+          <p>
+            Allocation for available housing units is done through
+            <span class="font-bold">a free, fair and transparent process.</span>
+          </p>
+          <p>
+            The initial eligibility for allocation will depend on several
+            factors such as when you got to the 10% deposit as well as demand
+            across the housing categories.
+          </p>
+          <p>
+            Under the affordable housing scheme each Kenyan can only benefit
+            once. Therefore, one Kenyan, one home will be enforced.
+          </p>
+          <p>
+            Those who do not get an allocation in the initial allocation are
+            then put on a waiting list to ensure they have priority in
+            subsequent allocations.
+          </p>
+          <p>
+            For private sector projects, allocation will be done according to
+            the terms and conditions of sale.
+          </p>
+        </div>
+      </div>
+      <div
+        id="register-image"
+        class="flex justify-center h-full xs:w-full lg:w-1/2"
+      >
+        <div class="flex h-fit mb-6">
+          <img
+            src="images/3_easy_steps_3.png"
+            alt="#"
+            class="max-w-full h-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="4-who-we-serve-cont"
+      class="flex items-center justify-between h-12-5pct xs:mt-24 lg:mt-48"
+    >
+      <div class="flex flex-col xs:w-full lg:w-2/3 xl:w-1/2">
+        <p class="font-medium mb-4 xs:text-2xl lg:text-4xl">Who we serve</p>
+        <p class="text-hero mb-2 xs:text-[16px] lg:text-[18px]">
+          The Affordable Housing Programme is a priority initiative under the
+          government which is geared towards facilitating the production of
+          decent, safe and affordable housing for citizens of Kenya.
+        </p>
+        <p class="text-hero xs:text-[16px] lg:text-[18px]">
+          Beyond catering to home applicants, the program incorporates supply,
+          demand, and creates an enabling environment through policy
+          interventions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="who-we-serve-grid-section"
+    class="relative overflow-hidden flex flex-col w-full 2xl:h-[200vh] 2xl:max-w-[1536px] xs:mt-8 2xl:mt-0"
+  >
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <div
+        class="absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-r from-blue-100 to-purple-100 opacity-50"
+      ></div>
+    </div>
+    <div
+      id="grid-cont"
+      class="relative z-10 py-8 xs:h-fit xl:h-[200vh] xs:flex xs:flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3 xs:gap-8 lg:gap-x-8 lg:gap-y-20"
+    >
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/holding-keys.jpg"
+            alt="Handing over house keys"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">
+            Local Home Applicants
+          </h2>
+          <p class="text-hero flex-grow">
+            For potential home owners, the system allows you to register,
+            contribute and own a unit. The platform will feature a wallet for
+            payments towards the deposit.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-4">
+            <button
+              id="register-now"
+              class="flex border-register-1 rounded-50px xs:px-4 xs:py-2 lg:px-8 lg:py-4"
+            >
+              <span class="font-medium xs:text-[16px] lg:text-[18px]">
+                Register Now
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 text-[18px] font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/statue-of-liberty.png"
+            alt="statue-of-liberty.jpg"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">
+            Diaspora Home applicants
+          </h2>
+          <p class="text-hero flex-grow">
+            This account is for Kenyans leaving abroad with a valid Kenyan
+            passport. They can save towards home ownership through the available
+            payment channels.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-0">
+            <button
+              id="register-now"
+              class="flex border-register-1 rounded-50px xs:px-4 xs:py-2 lg:px-8 lg:py-4"
+            >
+              <span class="font-medium xs:text-[16px] lg:text-[18px]">
+                Register Now
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/construction-worker.webp"
+            alt="construction-worker.webp"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">
+            Property Developers
+          </h2>
+          <p class="text-hero flex-grow">
+            The system will enable developers to onboard and register as
+            strategic partners. This will give developers access to demand and a
+            variety of incentives.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-0">
+            <button
+              id="coming-soon"
+              class="flex bg-red-100 rounded-50px px-4 py-2"
+            >
+              <span class="font-medium text-sm text-red-700">
+                Coming soon
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/black-business.jpg"
+            alt="black-business.jpg"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">
+            Organised Groups
+          </h2>
+          <p class="text-hero flex-grow">
+            The platform creates an avenue for organised groups to participate
+            and offtake available units on behalf of their beneficiaries.
+            Organised groups include; Employers (companies/businesses), Saccos,
+            Chamas and any such groups duly registered in Kenya.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-0">
+            <button
+              id="register-now"
+              class="flex border-register-1 rounded-50px xs:px-4 xs:py-2 lg:px-8 lg:py-4"
+            >
+              <span class="font-medium xs:text-[16px] lg:text-[18px]">
+                Register Now
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/msmes.webp"
+            alt="msmes.webp"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">MSMEs</h2>
+          <p class="text-hero flex-grow">
+            The system will enable viewing and managing of MSME profiles and
+            access to projects through which developers may off-take their goods
+            and services directly through the portal.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-0">
+            <button
+              id="coming-soon"
+              class="flex bg-red-100 rounded-50px px-4 py-2"
+            >
+              <span class="font-medium text-sm text-red-700">
+                Coming soon
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="grid-item"
+        class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+      >
+        <div class="relative h-1/2">
+          <img
+            src="images/black-handshake.jpg"
+            alt="black-handshake.jpg"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h2 class="font-medium mb-2 xs:text-xl lg:text-2xl">
+            Financiers/Investor Strategic Partners
+          </h2>
+          <p class="text-hero flex-grow">
+            The AHP program relies on strategic partners to actualise projects
+            and support both the demand and supply activities.
+          </p>
+          <div class="flex justify-between items-center xs:mt-8 lg:mt-0">
+            <button
+              id="coming-soon"
+              class="flex bg-red-100 rounded-50px px-4 py-2"
+            >
+              <span class="font-medium text-sm text-red-700">
+                Coming soon
+              </span>
+            </button>
+            <a
+              href="#"
+              class="text-register-1 font-medium xs:text-[16px] lg:text-[18px]"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="projects-carousel-section"
+    class="relative overflow-hidden flex flex-col w-full mt-16 2xl:max-w-[1536px] 2xl:mt-16 xs:h-fit 2xl:h-fit"
+  >
+    <div
+      class="absolute inset-0 pointer-events-none left-16"
+      style="z-index: -1"
+    >
+      <svg
+        class="w-full h-full"
+        viewBox="0 0 200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M50 0 A50 50 0 0 0 50 100 H200 V0 Z"
+          fill="#f1f5f3"
+          opacity="1"
+        />
+      </svg>
+    </div>
+
+    <div
+      id="latest-project-title"
+      class="flex flex-col pt-12 justify-center items-start xs:space-y-2 lg:space-y-4 xs:h-fit lg:h-[20vh]"
+    >
+      <span class="font-medium text-4xl xs:text-2xl"> Latest Projects </span>
+      <div
+        class="justify-between w-full xs:flex xs:flex-col lg:flex lg:flex-row"
+      >
+        <p
+          class="text-[20px] text-hero xs:text-[16px] md:text-[18px] lg:text-[20px] xs:mb-4 lg:mb-0"
+        >
+          These are completed or ongoing projects that offer a variety of
+          options to fit your preferences.
+        </p>
+        <div
+          class="flex items-center rounded-ecitizen bg-ahp px-4 gap-1 font-medium text-ahp xs:w-fit xs:mb-8"
+        >
+          <p class="">Explore More</p>
+          <span class="material-symbols-outlined text-[18px]">
+            arrow_forward
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      x-data="projectsCarousel('projectsCarousel')"
+      x-init="init()"
+      class="relative w-full overflow-hidden h-full"
+    >
+      <div
+        x-ref="projectsCarouselContainer"
+        class="flex transition-transform duration-300 ease-in-out"
+      >
+        <%= for _i <- 1..5 do %>
+        <div
+          class="flex-shrink-0 w-full xs:w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4 h-fit"
+        >
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden h-fit pb-8">
+            <div class="relative h-[60%] p-4">
+              <img
+                src="/images/house-image-001.jpg"
+                alt="house-image-001.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <span
+                class="absolute bottom-8 left-8 bg-ahp text-green-700 px-2 py-1 rounded-full text-xs font-medium"
+              >
+                Available
+              </span>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl font-medium">Buxton Point</h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-hero"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <p class="text-hero text-[16px] mb-2">
+                From
+                <span class="text-xl text-black font-medium">KES 1.8M</span>
+              </p>
+              <div class="flex text-hero text-[16px] mb-8 gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 mr-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span
+                  >3 Bedroom • 2 Bedroom • 1 Bedroom • Studio Apartments</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between xs:flex xs:flex-col 2xl:flex 2xl:flex-row xs:w-full 2xl:w-auto xs:gap-4 2xl:gap-0"
+              >
+                <div
+                  class="flex items-center text-hero text-[16px] gap-2 xs:self-start 2xl:self-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                  <span>Location, County</span>
+                </div>
+                <button
+                  class="bg-register-btn text-white px-8 py-3 rounded-md text-[16px] font-medium xs:w-full 2xl:w-auto"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <button
+        @click="prev()"
+        x-show="currentIndex > 0"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <button
+        @click="next()"
+        x-show="currentIndex < totalItems - itemsPerView"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
-        const overlay = document.getElementById('overlay');
+      // Force reload by adding a timestamp
+      document.currentScript.setAttribute("data-version", Date.now());
 
-        function openMenu() {
-            mobileMenu.classList.remove('translate-x-full', 'slide-out');
-            mobileMenu.classList.add('slide-in');
-            overlay.classList.remove('hidden');
-        }
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("projectsCarousel", (carouselId) => ({
+          carouselId,
+          currentIndex: 0,
+          itemsPerView: 3,
+          totalItems: 5,
 
-        function closeMenuFunc() {
-            mobileMenu.classList.remove('slide-in');
-            mobileMenu.classList.add('slide-out');
-            setTimeout(() => {
-                mobileMenu.classList.add('translate-x-full');
-                overlay.classList.add('hidden');
-            }, 300);
-        }
+          init() {
+            this.updateItemsPerView();
+            window.addEventListener("resize", () => {
+              this.updateItemsPerView();
+            });
+          },
 
-        hamburger.addEventListener('click', openMenu);
-        closeMenu.addEventListener('click', closeMenuFunc);
-        overlay.addEventListener('click', closeMenuFunc);
+          updateItemsPerView() {
+            const width = window.innerWidth;
+            if (width >= 1536) {
+              this.itemsPerView = 3; // 2xl: show 3 items
+            } else if (width >= 1280) {
+              this.itemsPerView = 3; // xl: show 2 items
+            } else if (width >= 1024) {
+              this.itemsPerView = 3; // lg: show 3 items
+            } else if (width >= 768) {
+              this.itemsPerView = 2; // md: show 2 items
+            } else if (width >= 640) {
+              this.itemsPerView = 1; // sm: show 2 items
+            } else {
+              this.itemsPerView = 1; // xs: show 1 item
+            }
+            console.log(
+              `${this.carouselId} - Items per view:`,
+              this.itemsPerView
+            ); // Debug log
+            this.updateTransform();
+          },
+
+          updateTransform() {
+            const translateX = this.currentIndex * (100 / this.itemsPerView);
+            this.$refs[
+              `${this.carouselId}Container`
+            ].style.transform = `translateX(-${translateX}%)`;
+          },
+
+          next() {
+            console.log(`${this.carouselId} - Next clicked`); // Debug log
+            const maxIndex = this.totalItems - this.itemsPerView;
+            this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
+            this.updateTransform();
+          },
+
+          prev() {
+            console.log(`${this.carouselId} - Prev clicked`); // Debug log
+            this.currentIndex = Math.max(this.currentIndex - 1, 0);
+            this.updateTransform();
+          },
+        }));
+      });
     </script>
 
+    <div
+      class="flex justify-between items-center h-[10vh] xs:w-32 lg:w-48 2xl:w-48 xs:self-center lg:self-start"
+    >
+      <div
+        class="bg-gray-300 rounded-ecitizen w-8 h-3 xs:w-4 xs:h-2 lg:w-8 lg:h-3"
+      ></div>
+      <div
+        class="bg-green-500 rounded-ecitizen w-12 h-3 xs:w-4 xs:h-2 lg:w-12 lg:h-3"
+      ></div>
+      <div
+        class="bg-gray-300 rounded-ecitizen w-8 h-3 xs:w-4 xs:h-2 lg:w-8 lg:h-3"
+      ></div>
+      <div
+        class="bg-gray-300 rounded-ecitizen w-8 h-3 xs:w-4 xs:h-2 lg:w-8 lg:h-3"
+      ></div>
+    </div>
+  </section>
 
+  <section id="ruto-image" class="relative w-full h-screen mt-16">
+    <div
+      class="absolute inset-0 bg-ruto bg-cover bg-center bg-no-repeat bg-overlay -mx-32"
+    ></div>
+    <div
+      class="relative flex items-center justify-start h-full px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-16"
+    >
+      <div
+        id="content"
+        class="relative flex flex-col items-start justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 z-10 gap-4 sm:gap-6 md:gap-8"
+      >
+        <div class="w-24 sm:w-32 md:w-36 lg:w-40 h-1 bg-green-500"></div>
+        <p
+          class="font-extrabold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl"
+        >
+          The right to housing is enshrined in the constitution of Kenya, which
+          provides that every person has the right to accessible and adequate
+          housing, and reasonable standards of sanitation
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Body Section -->
-    <section id="main-hero-cont" class="flex flex-col justify-between h-[130vh] w-full
-        xs:h-fit lg:h-screen    
-        sm:flex sm:flex-col md:flex md:flex-col md:justify-between lg:flex lg:flex-row lg:justify-between   
-        2xl:max-w-[1536px] max-w-[1536px]">
-        <div id="hero-content-cont" class="flex flex-col items-start  w-full gap-8 mt-24    transition-all duration-300 ease-in-out
-            xs:w-full sm:w-full md:w-full lg:w-[40%] lg:h-[60%] xl:w-[35%] xl:h-[40%]    w-35pct h-[65%] 
-            xs:gap-8 sm:gap-8 md:gap-8 lg:gap-[3rem] xl:gap-[4rem] 2xl:gap-[6.7rem]       
-            xs:mt-32 sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48 2xl:mt-48   ">
-            <div class="flex flex-col items-start  gap-8 
-                sm:gap-8 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-8">
-                <p class=" text-gray-900 font-medium w-full text-4xl
-                    sm:w-full lg:w-10/12
-                    xs:text-3xl sm:text-5xl md:text-5xl lg:text-6xl">Welcome to Boma Yangu</p>
+  <section
+    id="news-and-updates"
+    class="relative overflow-hidden flex flex-col w-full bg-faces pt-16 xs:h-fit xl:h-screen 2xl:h-[100vh] 2xl:max-w-[1536px]"
+  >
+    <div
+      id="title"
+      class="flex flex-col pt-12 justify-center items-start h-[20vh] space-y-4 mb-8"
+    >
+      <span class="font-medium xs:text-2xl sm:text-3xl lg:4xl"
+        >News & Updates</span
+      >
+      <p class="text-hero xs:text-[16px] md:text-[18px] lg:text-[20px]">
+        Stay up to date with the latest developments
+      </p>
+    </div>
 
-                <p class="text-hero text-[16px]
-                    sm:text-[18px] sm:text-hero">Boma Yangu is the gateway to the Affordable Housing Program (AHP). It
-                    is an opportunity to start the journey towards fulfilling your dream of owning a home in an
-                    affordable way.</p>
+    <div class="relative w-full h-[60vh] xs:h-fit xl:h-[60vh]">
+      <div
+        class="gap-x-8 w-full h-full xs:flex xs:flex-col xl:flex xl:flex-row"
+      >
+        <!-- Fixed green card -->
+        <div
+          class="bg-register-btn rounded-xl text-white xs:w-full xl:w-[30%] xs:p-4 lg:p-8 flex flex-col justify-between"
+        >
+          <div>
+            <div class="xs:mb-4 lg:mb-8">
+              <span
+                class="bg-orange-500 text-white font-medium px-3 py-1 rounded-full xs:text-sm lg:text-xl"
+              >
+                Notice
+              </span>
             </div>
-
-            <div class="flex flex-col items-start gap-8 w-full">
-                <button class="bg-register-btn  py-3 px-16  text-white font-medium rounded-50px">Register</button>
-
-                <div class="flex justify-between items-center  bg-ecitizen rounded-ecitizen
-                xs:p-4 xl:p-8
-                xs:flex xs:flex-col-reverse md:flex md:flex-row
-                xs:w-full md:w-full
-                xs:gap-0 lg:gap-4">
-                    <p class="w-2/4  font-medium text-ahp
-                    xs:w-full md:w-2/4 lg:w-2/4">We are making it simpler. You can now access Boma Yangu using
-                        your
-                        eCitizen account </p>
-                    <div class="flex justify-between items-center  ">
-                        <img src="images/e_citizen.png" alt="#" class="w-48">
-                    </div>
-                </div>
-            </div>
+            <h2 class="text-4xl font-bold mb-8 xs:text-xl lg:text-4xl">
+              Illegal Sale/Allocation of Park Road Houses in Ngara Under the
+              Affordable Housing Program
+            </h2>
+            <p class="text-sm mb-12 text-gray-200 xs:mb-8 lg:mb-12">
+              12 DEC 22
+            </p>
+          </div>
+          <button
+            class="border border-white text-white rounded-full hover:bg-white hover:text-green-500 transition-colors xs:px-4 xs:py-1 lg:px-8 lg:py-2 xs:text-sm lg:text-2xl self-start"
+          >
+            Learn More
+          </button>
         </div>
-
-        <div id="image-content-cont" class="flex justify-center mt-24 transition-all duration-300 ease-in-out
-            sm:mt-8 lg:mt-48
-            md:w-full lg:h-[55%] lg:w-[55%] xl:h-[60%] xl:w-[60%] 2xl:h-[65%] 2xl:w-[65%]
-            md:px-4 lg:px-0">
-            <div class="flex rounded-lg h-full">
-                <img src="images/hero_dummy.png" alt="#" class="h-full">
-            </div>
-        </div>
-    </section>
-
-
-    <section id="faces-section-cont" class="flex flex-col w-full gap-16 mt-16
-        2xl:max-w-[1536px]
-        xs:h-fit lg:h-fit">
-        <div id="housing-fundamental-cont" class="flex justify-between rounded-[10px] bg-faces  relative overflow-visible 
-            xs:flex xs:flex-col lg:flex lg:flex-row">
-            <div class="flex justify-center w-35pct   relative
-            xs:w-full lg:w-fit
-            xs:p-4">
-                <div class="flex justify-center   absolute -top-12
-                xs:relative xs:top-0 xs:w-full lg:w-fit lg: xl:absolute xl:w-3/4 xl:-top-12">
-                    <img src="images/faces_page2.png" alt="#" class="w-full">
-                </div>
-                <div class="invisible w-3/4
-                xs:hidden xl:block">
-                    <img src="images/faces_page2.png" alt="#" class="w-full">
-                </div>
-            </div>
-            <div class="flex justify-center  w-65pct
-            xs:w-full lg:w-full">
-                <div class="flex flex-col items-start justify-center gap-4  w-10/12 lg:mr-6
-                xs:w-full lg:w-10/12
-                xs:px-8 lg:px-0">
-                    <h2 class="font-medium w-[60%]
-                    xs:text-2xl sm:text-3xl lg:text-4xl
-                    xs:
-                    xs:font-normal lg:font-medium
-                    xs:w-full lg:w-[60%]">Housing is a fundamental human need</h2>
-                    <p class="text-hero
-                    xs:text-[16px] lg:text[18px]
-                    xs:w-full lg:w-10/12
-                    xs:mb-4 lg:mb-0">The right to housing is embedded in the constitution of
-                        Kenya,
-                        which provides that every person has the right to accessible and adequate housing,
-                        and to reasonable standards of sanitation. Kenya's growing economy translates into an
-                        expanding middle class, therefore increasing demand for housing.</p>
-                    <div class="
-                    xs:self-center lg:self-end">
-                        <div class="flex items-center justify-center rounded-50px px-4 bg-ahp text-ahp gap-[6px]
-                        xs:mb-8 lg:mb-0">
-                            <p class="font-medium
-                            xs:text-[20px] md:text-[18px]">About AHP</p>
-                            <span class="material-symbols-outlined
-                             xs:text-[20px] md:text-[18px]">
-                                arrow_forward
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="400+-cont" class="items-center justify-center bg-boma-green gap-40  py-16 h-fit text-[18px]
-            xs:flex xs:flex-col sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex lg:flex-row
-            xs:gap-8 lg:gap-20 xl:gap-32
-            xs:py-8 lg:py-16
-            xs:rounded-[20px] lg:rounded-[50px]">
-            <div class="flex flex-col items-center justify-center gap-4 ">
-                <h2 class="font-bold text-white
-                xs:text-5xl xl:text-7xl">400+</h2>
-                <p class="font-medium text-green-900">Projects completed</p>
-            </div>
-
-            <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-white
-                xs:text-5xl xl:text-7xl">45,000</h2>
-                <p class="font-medium text-green-900">Home owners</p>
-            </div>
-
-            <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-white
-                xs:text-5xl xl:text-7xl">334,152</h2>
-                <p class="font-medium text-green-900">Registered Applicants</p>
-            </div>
-
-            <div class="flex flex-col items-center justify-center gap-4">
-                <h2 class="font-bold text-white
-                xs:text-5xl xl:text-7xl">200+</h2>
-                <p class="font-medium text-green-900">MSME's on board</p>
-            </div>
-        </div>
-
-        <div class="flex
-        xs:items-center lg:items-start">
-            <p class="text-4xl font-medium
-            xs:w-full lg:w-1/2 xl:w-1/2
-            xs:text-2xl sm:text-3xl lg:text-4xl">Start the journey to home ownership in <span class="text-register-1">3
-                    simple steps</span></p>
-        </div>
-
-    </section>
-
-
-    <section id="3-simple-steps" class="flex flex-col justify-between   w-full 2xl:h-[240vh] mt-24
-        2xl:max-w-[1536px]
-        xs:h-fit lg:h[240vh]">
-        <div id="1-register-cont" class="items-center justify-between   pt-4 w-full h-27-5pct
-            xs:flex xs:flex-col lg:flex lg:flex-row">
-            <div id="content" class="flex flex-col h-full  
-                xs:w-full lg:w-1/2
-                xs:items-start lg:items-start
-                xs:mb-0 lg:mb-12">
-                <div id="1-register" class="flex items-center gap-4  w-full
-                    xs:py-0 lg:py-8
-                    xs:mb-4 lg:mb-0 ">
-                    <div class="items-center justify-center border-register-4 rounded-full
-                        xs:border-2 lg:border-4
-                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
-                        xs:p-4 lg:p-0
-                        xs:flex lg:inline-flex">
-                        <span class="text-register-1
-                        xs:font-medium lg:font-bold
-                        xs:text-xl lg:text-2xl">1</span>
-                    </div>
-                    <p class="
-                    xs:font-medium lg:font-medium
-                    xs:text-2xl sm:text-3xl lg:text-4xl">
-                        Register
-                    </p>
-                </div>
-                <div id="1-text" class="flex flex-col text-hero   space-y-2
-                xs:w-full lg:w-10/12
-                xs:text-[16px] lg:text-[18px]">
-                    <p>Registration is free. Complete your profile by submitting your personal details
-                        and housing preference (the type of house you are applying for).
-                        Once registered, your details will be verified through the relevant Government offices.
-                        To register, you must meet the conditions below:</p>
-                    <ul class="list-disc list-inside  px-2">
-                        <li>Must be a <span class="font-bold">Kenyan Citizen</span></li>
-                        <li>Must be above <span class="font-bold">18 years</span> of age</li>
-                        <li>Must have a valid <span class="font-bold">National Identity Card</span></li>
-                    </ul>
-                </div>
-                <div id="register-now" class="flex border-register-1  rounded-50px mt-16
-                    xs:px-4 xs:py-2 lg:px-8 lg:py-4
-                    xs:mb-8 lg:mb-0">
-                    <span class="font-medium
-                    xs:text-[16px] lg:text-[18px]">
-                        Register Now
-                    </span>
-                </div>
-            </div>
-            <div id="register-image" class="flex justify-center h-full
-            xs:w-full lg:w-1/2">
-                <div class="flex h-fit mb-6">
-                    <img src="images/3_easy_steps_1.png" alt="#" class="max-w-full h-auto mx-auto">
-                </div>
-            </div>
-        </div>
-
-
-
-        <div id="2-save-cont" class="items-center justify-between bg-faces h-32-5pct  pt-12
-            xs:pb-0 lg:pb-12
-            xs:flex xs:flex-col-reverse xs:gap-8 lg:flex lg:flex-row lg:gap-0">
-            <div id="register-image" class="flex justify-center h-full
-            xs:w-full lg:w-1/2">
-                <div class="flex h-fit mb-6">
-                    <img src="images/3_easy_steps_2.png" alt="#" class="">
-                </div>
-            </div>
-
-            <div id="content" class="flex flex-col h-full
-                xs:w-full lg:w-1/2 xl:w-1/2
-                xs:items-start lg:items-start
-                xs:pl-0 lg:pl-16 xl:pl-36">
-                <div id="2-save" class="flex items-center gap-4  w-full
-                    xs:py-0 lg:py-8
-                    xs:mb-4 lg:mb-0">
-                    <div class="items-center justify-center border-register-4 rounded-full
-                        xs:border-2 lg:border-4
-                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
-                        xs:p-4 lg:p-0
-                        xs:flex lg:inline-flex">
-                        <span class="text-register-1
-                        xs:font-medium lg:font-bold
-                        xs:text-xl lg:text-2xl">2</span>
-                    </div>
-                    <p class="
-                    xs:font-medium lg:font-medium
-                    xs:text-2xl sm:text-3xl lg:text-4xl">
-                        Save
-                    </p>
-                </div>
-                <div id="2-text" class="flex flex-col text-hero  space-y-2
-                xs:w-full lg:w-10/12
-                xs:text-[16px] lg:text-[18px]">
-                    <p>Upon registration, you can start saving any amount you wish to your account on Boma Yangu. </p>
-                    <p> You can save via USSD or through the payment options available on the web portal. </p>
-                    <p>You can also view all the available projects on Boma Yangu and add them to your wish list or
-                        select them as your preferred unit. </p>
-                    <p> Selecting a preferred unit means that your savings will count towards the 10% deposit required
-                        for a unit to be allocated to you. Please note that:</p>
-                    <ul class="list-disc list-inside  px-2">
-                        <li>Monthly saving are not capped </li>
-                        <li>You can request a refund on your voluntary savings, which will not be taxed at time of
-                            withdrawal.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div id="3-own-cont" class="items-center justify-between pt-12 h-27-5pct
-            xs:flex xs:flex-col lg:flex lg:flex-row">
-            <div id="content" class="flex flex-col h-full
-                xs:w-full lg:w-1/2
-                xs:items-start lg:items-start">
-                <div id="3-own" class="flex items-center gap-4  w-full
-                    xs:py-0 lg:py-8
-                    xs:mb-4 lg:mb-0">
-                    <div class="items-center justify-center border-register-4 rounded-full
-                        xs:border-2 lg:border-4
-                        xs:w-8 xs:h-8 lg:w-12 lg:h-12
-                        xs:p-4 lg:p-0
-                        xs:flex lg:inline-flex">
-                        <span class="text-register-1
-                        xs:font-medium lg:font-bold
-                        xs:text-xl lg:text-2xl">3</span>
-                    </div>
-                    <p class="
-                    xs:font-medium lg:font-medium
-                    xs:text-2xl sm:text-3xl lg:text-4xl">
-                        Own
-                    </p>
-                </div>
-                <div id="1-text" class="flex flex-col text-hero   space-y-2
-                xs:w-full lg:w-10/12
-                xs:mb-8 lg:mb-0
-                xs:text-[16px] lg:text-[18px]">
-                    <p> Allocation for available housing units is done through <span class="font-bold">a free, fair and
-                            transparent process.</span></p>
-                    <p> The initial eligibility for allocation will depend on several factors such as when you got to
-                        the 10% deposit as well as demand across the housing categories.</p>
-                    <p> Under the affordable housing scheme each Kenyan can only benefit once. Therefore, one Kenyan,
-                        one home will be enforced.</p>
-                    <p>Those who do not get an allocation in the initial allocation are then put on a waiting list to
-                        ensure they have priority in subsequent allocations.</p>
-                    <p>For private sector projects, allocation will be done according to the terms and conditions of
-                        sale.</p>
-                </div>
-            </div>
-            <div id="register-image" class="flex justify-center h-full
-            xs:w-full lg:w-1/2">
-                <div class="flex h-fit mb-6">
-                    <img src="images/3_easy_steps_3.png" alt="#" class="max-w-full h-auto mx-auto">
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <div id="4-who-we-serve-cont" class="flex items-center justify-between h-12-5pct
-        xs:mt-24 lg:mt-48">
-            <div class="flex flex-col
-            xs:w-full lg:w-2/3 xl:w-1/2">
-                <p class="font-medium  mb-4
-                xs:text-2xl lg:text-4xl">Who we serve</p>
-                <p class="text-hero mb-2
-                xs:text-[16px] lg:text-[18px]">The Affordable Housing Programme is a priority initiative under
-                    the government which is geared towards facilitating the production of decent, safe and affordable
-                    housing for citizens of Kenya.</p>
-                <p class="text-hero
-                xs:text-[16px] lg:text-[18px]">Beyond catering to home applicants, the program incorporates supply,
-                    demand, and creates an enabling environment through policy interventions.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="who-we-serve-grid-section" class="relative overflow-hidden flex flex-col   w-full 2xl:h-[200vh]
-        2xl:max-w-[1536px]
-        xs:mt-8 2xl:mt-0">
-        <div class="absolute inset-0 pointer-events-none z-0">
+        <!-- Carousel items -->
+        <div
+          x-data="newsCarousel('newsCarousel')"
+          x-init="init()"
+          id="carousel-cont-x"
+          class="relative flex transition-transform duration-300 ease-in-out w-[70%] xs:w-full xl:w-[70%] overflow-hidden h-full justify-center"
+        >
+          <div
+            x-ref="newsCarouselContainer"
+            class="flex transition-transform duration-300 ease-in-out h-full w-full self-center"
+          >
+            <%= for _i <- 1..5 do %>
             <div
-                class="absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 w-[90%]  aspect-square rounded-full bg-gradient-to-r from-blue-100 to-purple-100 opacity-50">
-            </div>
-        </div>
-        <div id="grid-cont" class="relative z-10 py-8
-            xs:h-fit xl:h-[200vh]
-            xs:flex xs:flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3
-            xs:gap-8 lg:gap-x-8 lg:gap-y-20">
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full
-                ">
-                <div class="relative h-1/2">
-                    <img src="images/holding-keys.jpg" alt="Handing over house keys" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">Local Home Applicants</h2>
-                    <p class="text-hero flex-grow">For potential home owners, the system allows you to register,
-                        contribute and own a unit. The platform will feature a wallet for payments towards the deposit.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-4">
-                        <button id="register-now" class="flex border-register-1  rounded-50px
-                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
-                            <span class="font-medium
-                            xs:text-[16px] lg:text-[18px]">
-                                Register Now
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 text-[18px] font-medium
-                            xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
-                    <img src="images/statue-of-liberty.png" alt="statue-of-liberty.jpg"
-                        class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">Diaspora Home applicants</h2>
-                    <p class="text-hero flex-grow">This account is for Kenyans leaving abroad with a valid Kenyan
-                        passport.
-                        They can save towards home ownership through the available payment channels.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-0">
-                        <button id="register-now" class="flex border-register-1  rounded-50px
-                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
-                            <span class="font-medium
-                            xs:text-[16px] lg:text-[18px]">
-                                Register Now
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 font-medium
-                            xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
-                    <img src="images/construction-worker.webp" alt="construction-worker.webp"
-                        class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">Property Developers</h2>
-                    <p class="text-hero flex-grow">The system will enable
-                        developers to onboard and register as strategic partners.
-                        This will give developers access to demand and a variety of incentives.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-0">
-                        <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
-                            <span class="font-medium text-sm text-red-700">
-                                Coming soon
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 font-medium
-                            xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
-                    <img src="images/black-business.jpg" alt="black-business.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">Organised Groups</h2>
-                    <p class="text-hero flex-grow">The platform creates an avenue for organised groups to participate
-                        and offtake available
-                        units on behalf of their beneficiaries. Organised groups include; Employers
-                        (companies/businesses), Saccos, Chamas
-                        and any such groups duly registered in Kenya.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-0">
-                        <button id="register-now" class="flex border-register-1  rounded-50px
-                            xs:px-4 xs:py-2 lg:px-8 lg:py-4">
-                            <span class="font-medium
-                            xs:text-[16px] lg:text-[18px]">
-                                Register Now
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 font-medium
-                        xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
-                    <img src="images/msmes.webp" alt="msmes.webp" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">MSMEs</h2>
-                    <p class="text-hero flex-grow">The system will enable
-                        viewing and managing of MSME profiles and access to projects through which developers may
-                        off-take their goods and
-                        services directly through the portal.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-0">
-                        <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
-                            <span class="font-medium text-sm text-red-700">
-                                Coming soon
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 font-medium
-                        xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div id="grid-item" class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
-                <div class="relative h-1/2">
-                    <img src="images/black-handshake.jpg" alt="black-handshake.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h2 class="font-medium mb-2
-                    xs:text-xl lg:text-2xl">Financiers/Investor Strategic Partners</h2>
-                    <p class="text-hero flex-grow">The AHP program relies on strategic partners to actualise projects
-                        and support both the demand
-                        and supply activities.
-                    </p>
-                    <div class="flex justify-between items-center
-                    xs:mt-8 lg:mt-0">
-                        <button id="coming-soon" class="flex bg-red-100  rounded-50px  px-4 py-2">
-                            <span class="font-medium text-sm text-red-700">
-                                Coming soon
-                            </span>
-                        </button>
-                        <a href="#" class="text-register-1 font-medium
-                        xs:text-[16px] lg:text-[18px]">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-
-    <section id="projects-carousel-section" class="relative overflow-hidden flex flex-col   w-full mt-16   
-        2xl:max-w-[1536px]
-        2xl:mt-16
-        xs:h-fit 2xl:h-fit">
-        <div class="absolute inset-0 pointer-events-none left-16" style="z-index: -1;">
-            <svg class="w-full h-full" viewBox="0 0 200 100" preserveAspectRatio="none">
-                <path d="M50 0 A50 50 0 0 0 50 100 H200 V0 Z" fill="#f1f5f3" opacity="1" />
-            </svg>
-        </div>
-
-        <div id="latest-project-title" class="flex flex-col pt-12 justify-center items-start
-            xs:space-y-2 lg:space-y-4
-            xs:h-fit lg:h-[20vh]">
-            <span class="font-medium text-4xl
-                xs:text-2xl">
-                Latest Projects
-            </span>
-            <div class="justify-between w-full
-                xs:flex xs:flex-col lg:flex lg:flex-row">
-                <p class="text-[20px] text-hero
-                xs:text-[16px] md:text-[18px] lg:text-[20px]
-                xs:mb-4 lg:mb-0">These are completed or ongoing projects that offer a variety of options
-                    to fit your preferences.</p>
-                <div class="flex items-center rounded-ecitizen bg-ahp px-4 gap-1 font-medium text-ahp
-                xs:w-fit 
-                xs:mb-8">
-                    <p class="">Explore More</p>
-                    <span class="material-symbols-outlined text-[18px]">
-                        arrow_forward
+              x-bind:style="{ width: `${100 / itemsPerView}%` }"
+              class="flex-shrink-0 w-full xs:w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/2 2xl:w-1/3 px-4 h-full"
+            >
+              <div
+                class="relative bg-white rounded-xl shadow-md overflow-hidden h-full w-full xs:pb-0 xl:pb-4 2xl:pb-16"
+              >
+                <img
+                  src="/images/ruto-news-and-updates-1.jpeg"
+                  alt="President speaking"
+                  class="w-full h-1/2 object-cover"
+                />
+                <div class="p-4">
+                  <div class="mb-2">
+                    <span
+                      class="absolute top-4 left-4 bg-register-btn text-white text-xl font-medium px-3 py-1 rounded-full"
+                    >
+                      Article
                     </span>
+                  </div>
+                  <div class="flex flex-col justify-between h-full">
+                    <h3
+                      class="text-2xl font-medium w-10/12 xs:mb-24 md:mb-24 xl:mb-36"
+                    >
+                      Affordable housing plan takes shape as President unveils
+                      first phase
+                    </h3>
+                    <p class="text-gray-400 text-sm">12 MAY 22</p>
+                  </div>
                 </div>
+              </div>
             </div>
+            <% end %>
+          </div>
+          <!-- Navigation buttons -->
+          <button
+            @click="prev2()"
+            x-show="currentIndex > 0"
+            class="absolute xs:left-0 lg:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <button
+            @click="next2()"
+            x-show="currentIndex < totalItems - itemsPerView"
+            class="absolute xs:right-0 lg:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
+    </div>
 
-        <div x-data="projectsCarousel('projectsCarousel')" x-init="init()"
-            class="relative w-full overflow-hidden h-full">
-            <div x-ref="projectsCarouselContainer" class="flex transition-transform duration-300 ease-in-out">
-                <%= for _i <- 1..5 do %>
-                    <div class="flex-shrink-0 w-full xs:w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4 h-fit">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-fit pb-8">
-                            <div class="relative h-[60%] p-4">
-                                <img src="/images/house-image-001.jpg" alt="house-image-001.jpg"
-                                    class="w-full h-full object-cover rounded-lg">
-                                <span
-                                    class="absolute bottom-8 left-8 bg-ahp text-green-700 px-2 py-1 rounded-full text-xs font-medium">
-                                    Available
-                                </span>
-                            </div>
-                            <div class="p-4">
-                                <div class="flex justify-between items-center mb-2">
-                                    <h3 class="text-xl font-medium">Buxton Point</h3>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hero" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <p class="text-hero text-[16px] mb-2">From <span
-                                        class="text-xl text-black font-medium">KES 1.8M</span></p>
-                                <div class="flex text-hero text-[16px] mb-8 gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                    </svg>
-                                    <span>3 Bedroom • 2 Bedroom • 1 Bedroom • Studio Apartments</span>
-                                </div>
-                                <div class="flex items-center justify-between
-                                xs:flex xs:flex-col 2xl:flex 2xl:flex-row
-                                xs:w-full 2xl:w-auto
-                                xs:gap-4 2xl:gap-0">
-                                    <div class="flex items-center text-hero text-[16px] gap-2
-                                    xs:self-start 2xl:self-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                        <span>Location, County</span>
-                                    </div>
-                                    <button class="bg-register-btn text-white px-8 py-3 rounded-md text-[16px] font-medium
-                                    xs:w-full 2xl:w-auto">
-                                        View
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <% end %>
-            </div>
+    <div
+      id="carousel-scroll-things"
+      class="flex justify-between items-center xs:w-24 lg:w-48 2xl:w-48 xs:h-fit lg:h-[10vh] xs:my-8 lg:my-0 xs:self-center lg:self-start"
+    >
+      <div class="bg-white rounded-ecitizen xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+      <div
+        class="bg-gray-500 rounded-ecitizen xs:w-6 xs:h-2 lg:w-12 lg:h-3"
+      ></div>
+      <div class="bg-white rounded-ecitizen xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+      <div class="bg-white rounded-ecitizen xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
+    </div>
+    <!-- Carousel indicators -->
+    <script>
+      // Force reload by adding a timestamp
+      document.currentScript.setAttribute("data-version", Date.now());
 
-            <button @click="prev()" x-show="currentIndex > 0"
-                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-
-            <button @click="next()" x-show="currentIndex < totalItems - itemsPerView"
-                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-
-        <script>
-            // Force reload by adding a timestamp
-            document.currentScript.setAttribute('data-version', Date.now());
-
-            document.addEventListener('alpine:init', () => {
-                Alpine.data('projectsCarousel', (carouselId) => ({
-                    carouselId,
-                    currentIndex: 0,
-                    itemsPerView: 3,
-                    totalItems: 5,
-
-                    init() {
-                        this.updateItemsPerView();
-                        window.addEventListener('resize', () => {
-                            this.updateItemsPerView();
-                        });
-                    },
-
-                    updateItemsPerView() {
-                        const width = window.innerWidth;
-                        if (width >= 1536) {
-                            this.itemsPerView = 3; // 2xl: show 3 items
-                        } else if (width >= 1280) {
-                            this.itemsPerView = 3; // xl: show 2 items
-                        } else if (width >= 1024) {
-                            this.itemsPerView = 3; // lg: show 3 items
-                        } else if (width >= 768) {
-                            this.itemsPerView = 2; // md: show 2 items
-                        } else if (width >= 640) {
-                            this.itemsPerView = 1; // sm: show 2 items
-                        } else {
-                            this.itemsPerView = 1; // xs: show 1 item
-                        }
-                        console.log(`${this.carouselId} - Items per view:`, this.itemsPerView); // Debug log
-                        this.updateTransform();
-                    },
-
-                    updateTransform() {
-                        const translateX = this.currentIndex * (100 / this.itemsPerView);
-                        this.$refs[`${this.carouselId}Container`].style.transform = `translateX(-${translateX}%)`;
-                    },
-
-                    next() {
-                        console.log(`${this.carouselId} - Next clicked`); // Debug log
-                        const maxIndex = this.totalItems - this.itemsPerView;
-                        this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
-                        this.updateTransform();
-                    },
-
-                    prev() {
-                        console.log(`${this.carouselId} - Prev clicked`); // Debug log
-                        this.currentIndex = Math.max(this.currentIndex - 1, 0);
-                        this.updateTransform();
-                    }
-
-                }
-
-                )
-
-
-                );
-
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("newsCarousel", (carouselId) => ({
+          carouselId,
+          currentIndex: 0,
+          itemsPerView: 3,
+          totalItems: 5,
+          init() {
+            this.updateItemsPerView();
+            window.addEventListener("resize", () => {
+              this.updateItemsPerView();
             });
-
-        </script>
-
-
-
-
-        <div class="flex justify-between items-center h-[10vh] 
-            xs:w-32 lg:w-48 2xl:w-48
-            xs:self-center lg:self-start">
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
-            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-            <div class="bg-green-500 rounded-ecitizen w-12 h-3
-            xs:w-4 xs:h-2 lg:w-12 lg:h-3"></div>
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
-            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-            <div class="bg-gray-300 rounded-ecitizen w-8 h-3
-            xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-
-        </div>
-    </section>
-
-
-
-    <section id="ruto-image" class="relative w-full h-screen mt-16">
-        <div class="absolute inset-0 bg-ruto bg-cover bg-center bg-no-repeat bg-overlay -mx-32"></div>
-        <div class="relative flex items-center justify-start h-full px-4 
-            sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-16">
-            <div id="content" class="relative flex flex-col items-start justify-center w-full 
-                sm:w-3/4 md:w-2/3 lg:w-1/2 z-10 gap-4 sm:gap-6 md:gap-8">
-                <div class="w-24 sm:w-32 md:w-36 lg:w-40 h-1 bg-green-500"></div>
-                <p class="font-extrabold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                    The right to housing is enshrined in the constitution of Kenya,
-                    which provides that every person has the right to accessible and adequate housing,
-                    and reasonable standards of sanitation
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="news-and-updates" class="relative overflow-hidden flex flex-col  w-full bg-faces pt-16
-        xs:h-fit xl:h-screen 2xl:h-[100vh] 
-        2xl:max-w-[1536px]">
-        <div id="title" class="flex flex-col pt-12 justify-center items-start h-[20vh]  space-y-4 mb-8">
-            <span class="font-medium
-            xs:text-2xl sm:text-3xl lg:4xl">News & Updates</span>
-            <p class="text-hero
-            xs:text-[16px] md:text-[18px] lg:text-[20px]">Stay up to date with the latest developments</p>
-        </div>
-
-        <div class="relative w-full h-[60vh] xs:h-fit xl:h-[60vh]">
-            <div class="gap-x-8 w-full h-full
-                xs:flex xs:flex-col xl:flex xl:flex-row">
-                <!-- Fixed green card -->
-                <div
-                    class="bg-register-btn rounded-xl text-white xs:w-full xl:w-[30%] xs:p-4 lg:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="xs:mb-4 lg:mb-8">
-                            <span
-                                class="bg-orange-500 text-white font-medium px-3 py-1 rounded-full xs:text-sm lg:text-xl">Notice</span>
-                        </div>
-                        <h2 class="text-4xl font-bold mb-8 xs:text-xl lg:text-4xl">Illegal Sale/Allocation of Park Road
-                            Houses in Ngara Under the Affordable Housing Program</h2>
-                        <p class="text-sm mb-12 text-gray-200 xs:mb-8 lg:mb-12">12 DEC 22</p>
-                    </div>
-                    <button
-                        class="border border-white text-white rounded-full hover:bg-white hover:text-green-500 transition-colors xs:px-4 xs:py-1 lg:px-8 lg:py-2 xs:text-sm lg:text-2xl self-start">
-                        Learn More
-                    </button>
-                </div>
-
-                <!-- Carousel items -->
-                <div x-data="newsCarousel('newsCarousel')" x-init="init()" id="carousel-cont-x"
-                    class="relative flex transition-transform duration-300 ease-in-out w-[70%] xs:w-full xl:w-[70%] overflow-hidden h-full justify-center">
-                    <div x-ref="newsCarouselContainer"
-                        class="flex transition-transform duration-300 ease-in-out h-full w-full self-center">
-                        <%= for _i <- 1..5 do %>
-                            <div x-bind:style="{ width: `${100 / itemsPerView}%` }"
-                                class="flex-shrink-0 w-full xs:w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/2 2xl:w-1/3 p-4 h-full">
-                                <div class="relative bg-white rounded-xl shadow-md overflow-hidden h-full w-full
-                                xs:pb-0 xl:pb-4 2xl:pb-16">
-                                    <img src="/images/ruto-news-and-updates-1.jpeg" alt="President speaking"
-                                        class="w-full h-1/2 object-cover">
-                                    <div class="p-4">
-                                        <div class="mb-2">
-                                            <span
-                                                class="absolute top-4 left-4 bg-register-btn text-white text-xl font-medium px-3 py-1 rounded-full">Article</span>
-                                        </div>
-                                        <div class="flex flex-col justify-between h-full">
-                                            <h3 class="text-2xl font-medium w-10/12
-                                            xs:mb-24 md:mb-24 xl:mb-36">Affordable housing plan takes
-                                                shape as President unveils first phase</h3>
-                                            <p class="text-gray-400 text-sm">12 MAY 22</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <% end %>
-                    </div>
-
-
-
-                    <!-- Navigation buttons -->
-                    <button @click="prev2()" x-show="currentIndex > 0"
-                        class="absolute xs:left-0 lg:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-
-                    <button @click="next2()" x-show="currentIndex < totalItems - itemsPerView"
-                        class="absolute xs:right-0 lg:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-
-
-
-            </div>
-        </div>
-
-        <div id="carousel-scroll-things" class="flex justify-between items-center 
-        xs:w-24 lg:w-48 2xl:w-48
-        xs:h-fit lg:h-[10vh]
-        xs:my-8 lg:my-0
-        xs:self-center lg:self-start">
-            <div class="bg-white rounded-ecitizen
-        xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-            <div class="bg-gray-500 rounded-ecitizen
-        xs:w-6 xs:h-2 lg:w-12 lg:h-3"></div>
-            <div class="bg-white rounded-ecitizen
-        xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-            <div class="bg-white rounded-ecitizen
-        xs:w-4 xs:h-2 lg:w-8 lg:h-3"></div>
-        </div>
-
-        <!-- Carousel indicators -->
-
-
-        <script>
-            // Force reload by adding a timestamp
-            document.currentScript.setAttribute('data-version', Date.now());
-
-            document.addEventListener('alpine:init', () => {
-                Alpine.data('newsCarousel', (carouselId) => ({
-                    carouselId,
-                    currentIndex: 0,
-                    itemsPerView: 3,
-                    totalItems: 5,
-                    init() {
-                        this.updateItemsPerView();
-                        window.addEventListener('resize', () => {
-                            this.updateItemsPerView();
-                        });
-                    },
-                    updateItemsPerView() {
-                        const width = window.innerWidth;
-                        if (width >= 1536) {
-                            this.itemsPerView = 3; // 2xl: show 3 items
-                        } else if (width >= 1280) {
-                            this.itemsPerView = 2; // xl: show 2 items
-                        } else if (width >= 1024) {
-                            this.itemsPerView = 3; // xl: show 2 items
-                        } else if (width >= 768) {
-                            this.itemsPerView = 2; // md: show 2 items
-                        } else if (width >= 640) {
-                            this.itemsPerView = 2; // sm: show 2 items
-                        } else {
-                            this.itemsPerView = 1; // xs: show 1 item
-                        }
-                        console.log(`${this.carouselId} - Items per view:`, this.itemsPerView); // Debug log
-                        this.updateTransform();
-                    },
-                    updateTransform() {
-                        const translateX = this.currentIndex * (100 / this.itemsPerView);
-                        this.$refs[`${this.carouselId}Container`].style.transform = `translateX(-${translateX}%)`;
-                    },
-                    next2() {
-                        console.log(`${this.carouselId} - Next clicked`); // Debug log
-                        const maxIndex = this.totalItems - this.itemsPerView;
-                        this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
-                        this.updateTransform();
-                    },
-                    prev2() {
-                        console.log(`${this.carouselId} - Prev clicked`); // Debug log
-                        this.currentIndex = Math.max(this.currentIndex - 1, 0);
-                        this.updateTransform();
-                    }
-                }));
-            });
-        </script>
-    </section>
-
-    <!--
+          },
+          updateItemsPerView() {
+            const width = window.innerWidth;
+            if (width >= 1536) {
+              this.itemsPerView = 3; // 2xl: show 3 items
+            } else if (width >= 1280) {
+              this.itemsPerView = 2; // xl: show 2 items
+            } else if (width >= 1024) {
+              this.itemsPerView = 3; // xl: show 2 items
+            } else if (width >= 768) {
+              this.itemsPerView = 2; // md: show 2 items
+            } else if (width >= 640) {
+              this.itemsPerView = 2; // sm: show 2 items
+            } else {
+              this.itemsPerView = 1; // xs: show 1 item
+            }
+            console.log(
+              `${this.carouselId} - Items per view:`,
+              this.itemsPerView
+            ); // Debug log
+            this.updateTransform();
+          },
+          updateTransform() {
+            const translateX = this.currentIndex * (100 / this.itemsPerView);
+            this.$refs[
+              `${this.carouselId}Container`
+            ].style.transform = `translateX(-${translateX}%)`;
+          },
+          next2() {
+            console.log(`${this.carouselId} - Next clicked`); // Debug log
+            const maxIndex = this.totalItems - this.itemsPerView;
+            this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
+            this.updateTransform();
+          },
+          prev2() {
+            console.log(`${this.carouselId} - Prev clicked`); // Debug log
+            this.currentIndex = Math.max(this.currentIndex - 1, 0);
+            this.updateTransform();
+          },
+        }));
+      });
+    </script>
+  </section>
+  <!--
     
 
         <div id="carousel-scroll-things" class="flex justify-between items-center 
@@ -990,73 +1305,81 @@
         </div>
     </section>
     -->
-
-
-
-    <section id="footer-section" class="flex flex-col  w-full h-[33vh] gap-4 mt-24
-        2xl:max-w-[1536px]">
-        <div id="top" class="items-center w-full h-[50%]
-        xs:flex xs:flex-col lg:flex lg:flex-row
-        xs:h-fit lg:h-fit xl:h-[50%]
-        xs:px-0 lg:px-0
-        xs:justify-center lg:justify-between">
-            <div class="flex items-center gap-4
-            xs:w-full lg:w-80 xl:w-96
-            xs:items-center lg:items-center
-            xs:mb-4 lg:mb-0
-            xs:justify-center lg:justify-normal
-            ">
-                <img src="images/coat-of-arms-official.png" alt="#" class=" 
-                xs:w-20 lg:w-24">
-                <div id="hr-2" class="bg-gray-300
-                xs:h-16 lg:h-24
-                xs:w-[1px] lg:w-[1px]
-                "></div>
-                <div class="flex flex-col gap-2 justify-center
-                xs:text-[11px] lg:text-[12px] xl:text-[14px]
-                ">
-                    <span class="font-black ">Ministry of Lands, Public-works, Housing and Urban Development</span>
-                    <span class="font-bold text-gray-700">State Department of Housing & Urban Development</span>
-                </div>
-            </div>
-            <div class="text-gray-700 text-[20px] flex
-            xs:w-full xs:justify-center lg:w-auto lg:justify-normal
-            xs:text-sm md:text-[16px] lg:text-[16px] xl:text-[18px]
-            xs:mb-4 lg:mb-0
-            ">
-                <p class="xs:text-center lg:text-start">For enquiries, contact Huduma Centre - 0206900020</p>
-            </div>
-            <div class>
-                <img src="images/boma_yangu_logo.png" alt="#" class="
-                xs:w-24 lg:w-32 xl:w-40">
-            </div>
+  <section
+    id="footer-section"
+    class="flex flex-col w-full h-[33vh] gap-4 mt-4 2xl:max-w-[1536px]"
+  >
+    <div
+      id="top"
+      class="items-center w-full h-[50%] xs:flex xs:flex-col lg:flex lg:flex-row xs:h-fit lg:h-fit xl:h-[50%] xs:px-0 lg:px-0 xs:justify-center lg:justify-between"
+    >
+      <div
+        class="flex items-center gap-4 xs:w-full lg:w-80 xl:w-96 xs:items-center lg:items-center xs:mb-4 lg:mb-0 xs:justify-center lg:justify-normal"
+      >
+        <img
+          src="images/coat-of-arms-official.png"
+          alt="#"
+          class="xs:w-20 lg:w-24"
+        />
+        <div
+          id="hr-2"
+          class="bg-gray-300 xs:h-16 lg:h-24 xs:w-[1px] lg:w-[1px]"
+        ></div>
+        <div
+          class="flex flex-col gap-2 justify-center xs:text-[11px] lg:text-[12px] xl:text-[14px]"
+        >
+          <span class="font-black">
+            Ministry of Lands, Public-works, Housing and Urban Development
+          </span>
+          <span class="font-bold text-gray-700">
+            State Department of Housing & Urban Development
+          </span>
         </div>
+      </div>
+      <div
+        class="text-gray-700 text-[20px] flex xs:w-full xs:justify-center lg:w-auto lg:justify-normal xs:text-sm md:text-[16px] lg:text-[16px] xl:text-[18px] xs:mb-4 lg:mb-0"
+      >
+        <p class="xs:text-center lg:text-start">
+          For enquiries, contact Huduma Centre - 0206900020
+        </p>
+      </div>
+      <div class>
+        <img
+          src="images/boma_yangu_logo.png"
+          alt="#"
+          class="xs:w-24 lg:w-32 xl:w-40"
+        />
+      </div>
+    </div>
 
-        <div id="hr-cont" class="w-full px-16
-        xs:px-0 lg:px-0 2xl:px-0
-        xs:mt-4 xs:mb-8 lg:mt-4 lg:mb-4 xl:mb-0 xl:mt-0">
-            <div id="hr" class="w-full bg-gray-300 h-[1px]"></div>
-        </div>
+    <div
+      id="hr-cont"
+      class="w-full px-16 xs:px-0 lg:px-0 2xl:px-0 xs:mt-4 xs:mb-8 lg:mt-4 lg:mb-4 xl:mb-0 xl:mt-0"
+    >
+      <div id="hr" class="w-full bg-gray-300 h-[1px]"></div>
+    </div>
 
-        <div id="top" class="flex justify-between items-center w-full h-[30%]
-        xs:flex xs:flex-col lg:flex lg:flex-row
-        xs:gap-4 lg:gap-0">
-            <div class="flex items-center w-fit">
-                <span class="text-gray-700
-                xs:text-sm lg:text-sm xl:text-[16px]">Copyright © 2023 <a href="#"
-                        class="underline decoration-gray-700"> Republic of
-                        Kenya</a>. All rights reserved.</span>
-            </div>
-            <div class="flex text-hero justify-between gap-8 font-semibold">
-                <p>Terms & Conditions</p>
-                <p>Privacy Policy</p>
-            </div>
-            <div class="flex gap-8
-            xs:mb-8 lg:mb-0">
-                <i class='bx bxl-twitter text-gray-400 text-4xl'></i>
-                <i class='bx bxl-linkedin-square text-gray-400 text-4xl'></i>
-                <i class='bx bxl-facebook-circle text-gray-400 text-4xl'></i>
-            </div>
-        </div>
-    </section>
+    <div
+      id="top"
+      class="flex justify-between items-center w-full h-[30%] xs:flex xs:flex-col lg:flex lg:flex-row xs:gap-4 lg:gap-0"
+    >
+      <div class="flex items-center w-fit">
+        <span class="text-gray-700 xs:text-sm lg:text-sm xl:text-[16px]">
+          Copyright © 2023
+          <a href="#" class="underline decoration-gray-700">
+            Republic of Kenya</a
+          >. All rights reserved.
+        </span>
+      </div>
+      <div class="flex text-hero justify-between gap-8 font-semibold">
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+      </div>
+      <div class="flex gap-8 xs:mb-8 lg:mb-0">
+        <i class="bx bxl-twitter text-gray-400 text-4xl"></i>
+        <i class="bx bxl-linkedin-square text-gray-400 text-4xl"></i>
+        <i class="bx bxl-facebook-circle text-gray-400 text-4xl"></i>
+      </div>
+    </div>
+  </section>
 </section>
